@@ -10,13 +10,13 @@ class ProctoringEventCreate(BaseModel):
     """Создание события прокторинга"""
     
     event_type: ProctoringEventType = Field(..., description="Тип события")
-    metadata: dict = Field(default_factory=dict, description="Дополнительные данные")
+    proctoring_metadata: dict = Field(default_factory=dict, description="Дополнительные данные")
     
     class Config:
         json_schema_extra = {
             "example": {
                 "event_type": "tab_switch",
-                "metadata": {
+                "proctoring_metadata": {
                     "from_tab": "exam",
                     "to_tab": "google"
                 }
@@ -31,7 +31,7 @@ class ProctoringEventResponse(BaseModel):
     attempt_id: str = Field(..., description="UUID попытки")
     event_type: ProctoringEventType = Field(..., description="Тип события")
     timestamp: datetime = Field(..., description="Время события")
-    metadata: dict = Field(..., description="Дополнительные данные")
+    proctoring_metadata: dict = Field(..., description="Дополнительные данные")
     
     class Config:
         from_attributes = True
@@ -41,7 +41,7 @@ class ProctoringEventResponse(BaseModel):
                 "attempt_id": "123e4567-e89b-12d3-a456-426614174000",
                 "event_type": "tab_switch",
                 "timestamp": "2025-10-25T10:15:30Z",
-                "metadata": {
+                "proctoring_metadata": {
                     "from_tab": "exam",
                     "to_tab": "google"
                 }
@@ -60,11 +60,11 @@ class ProctoringEventBatchCreate(BaseModel):
                 "events": [
                     {
                         "event_type": "copy",
-                        "metadata": {"text_length": 50}
+                        "proctoring_metadata": {"text_length": 50}
                     },
                     {
                         "event_type": "tab_switch",
-                        "metadata": {}
+                        "proctoring_metadata": {}
                     }
                 ]
             }

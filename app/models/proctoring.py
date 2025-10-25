@@ -55,7 +55,7 @@ class ProctoringEvent(Base):
     
     # Дополнительные данные (JSON)
     # Например: {"text_length": 100, "source": "keyboard"}
-    metadata: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
+    product_metadata: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
     
     # Relationships
     attempt: Mapped["ExamAttempt"] = relationship("ExamAttempt", back_populates="proctoring_events")

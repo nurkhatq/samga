@@ -80,7 +80,7 @@ class Question(Base, TimestampMixin):
     tags: Mapped[list[str]] = mapped_column(ARRAY(String), default=list, nullable=False)
     
     # Метаданные (например, source_question_number из импорта)
-    metadata: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
+    question_metadata: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
     
     # Relationships
     subject: Mapped["Subject"] = relationship("Subject", back_populates="questions")

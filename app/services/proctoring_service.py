@@ -66,7 +66,7 @@ class ProctoringService:
             attempt_id=attempt_uuid,
             event_type=event.event_type,
             timestamp=datetime.utcnow(),
-            metadata=event.metadata
+            proctoring_metadata=event.metadata
         )
         db.add(proctoring_event)
         
@@ -125,7 +125,7 @@ class ProctoringService:
                 attempt_id=attempt_uuid,
                 event_type=event.event_type,
                 timestamp=current_time,
-                metadata=event.metadata
+                proctoring_metadata=event.metadata
             )
             db.add(proctoring_event)
             created_count += 1

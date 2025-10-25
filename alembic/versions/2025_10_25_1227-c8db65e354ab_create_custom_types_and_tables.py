@@ -88,10 +88,14 @@ def upgrade() -> None:
     op.alter_column('majors', 'title_ru',
                existing_type=sa.VARCHAR(length=500),
                nullable=True)
-    op.alter_column('majors', 'magistracy_type',
-               existing_type=postgresql.ENUM('profile', 'scientific_pedagogical', name='magistracy_type'),
-               type_=sa.Enum('profile', 'scientific_pedagogical', name='magistracytype'),
-               existing_nullable=False)
+    
+    # Изменяем тип magistracy_type с использованием USING для явного преобразования
+    op.execute("""
+        ALTER TABLE majors 
+        ALTER COLUMN magistracy_type TYPE magistracytype 
+        USING magistracy_type::text::magistracytype
+    """)
+    
     op.alter_column('majors', 'created_at',
                existing_type=postgresql.TIMESTAMP(),
                type_=sa.DateTime(timezone=True),
@@ -146,10 +150,14 @@ def downgrade() -> None:
                type_=postgresql.TIMESTAMP(),
                existing_nullable=False,
                existing_server_default=sa.text('now()'))
-    op.alter_column('majors', 'magistracy_type',
-               existing_type=sa.Enum('profile', 'scientific_pedagogical', name='magistracytype'),
-               type_=postgresql.ENUM('profile', 'scientific_pedagogical', name='magistracy_type'),
-               existing_nullable=False)
+    
+    # Откатываем тип magistracy_type обратно
+    op.execute("""
+        ALTER TABLE majors 
+        ALTER COLUMN magistracy_type TYPE magistracy_type 
+        USING magistracy_type::text::magistracy_type
+    """)
+    
     op.alter_column('majors', 'title_ru',
                existing_type=sa.VARCHAR(length=500),
                nullable=False)

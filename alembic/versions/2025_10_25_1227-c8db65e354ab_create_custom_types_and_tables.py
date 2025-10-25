@@ -38,6 +38,14 @@ def upgrade() -> None:
         END $$;
     """)
     
+    op.execute("""
+        DO $$ BEGIN
+            CREATE TYPE userrole AS ENUM ('admin', 'user');
+        EXCEPTION
+            WHEN duplicate_object THEN null;
+        END $$;
+    """)
+    
     # Добавляем новые колонки в exam_answers
     op.add_column('exam_answers', sa.Column('time_taken_seconds', sa.Integer(), nullable=True))
     op.add_column('exam_answers', sa.Column('updated_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=False))
@@ -116,6 +124,13 @@ def upgrade() -> None:
         USING subject_type::text::subjecttype
     """)
     
+    # Изменения в users - изменяем тип role на ENUM
+    op.execute("""
+        ALTER TABLE users 
+        ALTER COLUMN role TYPE userrole 
+        USING role::text::userrole
+    """)
+    
     # Изменения в proctoring_events
     op.add_column('proctoring_events', sa.Column('product_metadata', sa.JSON(), nullable=False))
     op.alter_column('proctoring_events', 'timestamp',
@@ -143,6 +158,12 @@ def downgrade() -> None:
                type_=postgresql.TIMESTAMP(),
                existing_nullable=False)
     op.drop_column('proctoring_events', 'product_metadata')
+    
+    # Откат типа users.role обратно на VARCHAR
+    op.execute("""
+        ALTER TABLE users 
+        ALTER COLUMN role TYPE VARCHAR
+    """)
     
     # Откат типа subject_type обратно на VARCHAR
     op.execute("""
@@ -216,6 +237,7 @@ def downgrade() -> None:
     op.drop_column('exam_answers', 'time_taken_seconds')
     
     # Удаляем пользовательские типы
+    op.execute("DROP TYPE IF EXISTS userrole CASCADE")
     op.execute("DROP TYPE IF EXISTS subjecttype CASCADE")
     op.execute("DROP TYPE IF EXISTS magistracytype CASCADE")
     

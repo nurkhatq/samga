@@ -30,65 +30,48 @@ def get_password_hash(password: str) -> str:
 # ===================================
 
 def create_access_token(data: dict[str, Any], expires_delta: timedelta | None = None) -> str:
-    """
-    Создать Access Token
-    
-    Args:
-        data: Данные для токена (обычно {"sub": user_id})
-        expires_delta: Время жизни токена
-    
-    Returns:
-        Закодированный JWT токен
-    """
     to_encode = data.copy()
-    
+
+    # гарантируем, что sub — строка
+    if "sub" in to_encode:
+        to_encode["sub"] = str(to_encode["sub"])
+
     if expires_delta:
         expire = datetime.utcnow() + expires_delta
     else:
         expire = datetime.utcnow() + timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
-    
+
     to_encode.update({
         "exp": expire,
         "iat": datetime.utcnow(),
         "type": "access"
     })
-    
+
     encoded_jwt = jwt.encode(
         to_encode,
         settings.SECRET_KEY,
         algorithm=settings.ALGORITHM
     )
-    
+
     return encoded_jwt
 
 
+
 def create_refresh_token(data: dict[str, Any]) -> str:
-    """
-    Создать Refresh Token
-    
-    Args:
-        data: Данные для токена (обычно {"sub": user_id})
-    
-    Returns:
-        Закодированный JWT токен
-    """
     to_encode = data.copy()
-    
+
+    if "sub" in to_encode:
+        to_encode["sub"] = str(to_encode["sub"])
+
     expire = datetime.utcnow() + timedelta(days=settings.REFRESH_TOKEN_EXPIRE_DAYS)
-    
+
     to_encode.update({
         "exp": expire,
         "iat": datetime.utcnow(),
         "type": "refresh"
     })
-    
-    encoded_jwt = jwt.encode(
-        to_encode,
-        settings.SECRET_KEY,
-        algorithm=settings.ALGORITHM
-    )
-    
-    return encoded_jwt
+
+    return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
 
 
 def decode_token(token: str) -> dict[str, Any] | None:

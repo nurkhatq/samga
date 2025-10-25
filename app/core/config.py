@@ -35,16 +35,22 @@ class Settings(BaseSettings):
     @classmethod
     def parse_cors_origins(cls, v):
         if isinstance(v, str):
-            # Проверка на пустую строку
             if not v or v.strip() == "":
                 return []
-            # Handle both JSON array and comma-separated string
+            # Handle JSON array format
             if v.startswith("["):
                 import json
-                return json.loads(v)
+                try:
+                    return json.loads(v)
+                except json.JSONDecodeError:
+                    # Fallback to comma-separated if JSON parsing fails
+                    return [origin.strip() for origin in v.split(",") if origin.strip()]
             else:
+                # Comma-separated string
                 return [origin.strip() for origin in v.split(",") if origin.strip()]
-        return v if v else []
+        elif isinstance(v, list):
+            return v
+        return []
     
     # ===================================
     # Database (PostgreSQL)
@@ -81,8 +87,14 @@ class Settings(BaseSettings):
         if v:
             return v
         data = info.data
-        password_part = f":{data['REDIS_PASSWORD']}@" if data.get("REDIS_PASSWORD") else ""
-        return f"redis://{password_part}{data['REDIS_HOST']}:{data['REDIS_PORT']}/{data['REDIS_DB']}"
+        password = data.get('REDIS_PASSWORD')
+        if password:
+            # URL-encode password for special characters
+            from urllib.parse import quote
+            password_encoded = quote(password, safe='')
+            return f"redis://:{password_encoded}@{data['REDIS_HOST']}:{data['REDIS_PORT']}/{data['REDIS_DB']}"
+        else:
+            return f"redis://{data['REDIS_HOST']}:{data['REDIS_PORT']}/{data['REDIS_DB']}"
     
     # ===================================
     # Celery (RabbitMQ)

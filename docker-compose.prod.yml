@@ -78,7 +78,7 @@ services:
     volumes:
       - ./app:/app/app:ro
       - ./scripts:/app/scripts:ro
-      - ./alembic:/app/alembic:ro
+      - ./alembic:/app/alembic:rw
       - ./alembic.ini:/app/alembic.ini:ro
       - ./data:/app/data:ro
     depends_on:

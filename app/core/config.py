@@ -23,10 +23,7 @@ class Settings(BaseSettings):
     BACKEND_URL: str = "https://connect-aitu.me/api"
     
     # CORS
-    CORS_ORIGINS: List[str] = [
-        "https://connect-aitu.me",
-        "https://www.connect-aitu.me"
-    ]
+    CORS_ORIGINS: List[str] = []
     
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod

@@ -1,12 +1,13 @@
 """
 Асинхронная и синхронная сессии БД (SQLAlchemy 2.0)
-Для FastAPI (async) и Celery (sync)
+Для FastAPI (async) и Celery (sync + async support)
 """
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Optional
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.pool import NullPool
+import asyncio
 
 from app.core.config import settings
 
@@ -24,22 +25,19 @@ async_engine = create_async_engine(
 
 # Создаем фабрику асинхронных сессий
 AsyncSessionLocal = async_sessionmaker(
-    engine,
+    async_engine,
     class_=AsyncSession,
     expire_on_commit=False,
     autocommit=False,
     autoflush=False,
 )
 
-# Алиас для обратной совместимости (если где-то используется async_session_maker)
+# Алиас для обратной совместимости
 async_session_maker = AsyncSessionLocal
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
     """
     Зависимость FastAPI для получения асинхронной сессии БД
-    
-    Yields:
-        AsyncSession: Асинхронная сессия базы данных
     """
     async with AsyncSessionLocal() as session:
         try:
@@ -73,12 +71,45 @@ SessionLocal = sessionmaker(
 def get_sync_db():
     """
     Зависимость для получения синхронной сессии БД (для Celery)
-    
-    Yields:
-        Session: Синхронная сессия базы данных
     """
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+
+
+# ===================================
+# Утилиты для Celery с async задачами
+# ===================================
+def run_async_task(async_func):
+    """
+    Запуск асинхронной функции в синхронном контексте (для Celery)
+    
+    Использование в Celery задачах:
+        result = run_async_task(my_async_function())
+    """
+    try:
+        # Пытаемся использовать существующий event loop
+        loop = asyncio.get_event_loop()
+        if loop.is_running():
+            # Если loop уже запущен, создаем новый для этой задачи
+            return asyncio.run(async_func)
+        else:
+            # Используем существующий loop
+            return loop.run_until_complete(async_func)
+    except RuntimeError:
+        # Если нет event loop, создаем новый
+        return asyncio.run(async_func)
+
+
+async def get_async_db() -> AsyncSession:
+    """
+    Получить асинхронную сессию для использования в Celery задачах
+    """
+    async with AsyncSessionLocal() as session:
+        try:
+            return session
+        except Exception:
+            await session.rollback()
+            raise

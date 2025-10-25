@@ -48,7 +48,7 @@ def upgrade() -> None:
         sa.Column('title_kk', sa.String(length=500), nullable=False),
         sa.Column('title_ru', sa.String(length=500), nullable=False),
         sa.Column('magistracy_type', sa.Enum('profile', 'scientific_pedagogical', name='magistracy_type'), nullable=False),
-        sa.Column('categories', postgresql.ARRAY(sa.String()), nullable=False, server_default='{}'),
+        sa.Column('categories', postgresql.JSONB(astext_type=sa.Text()), nullable=False, server_default='[]'),
         sa.Column('is_active', sa.Boolean(), nullable=False, server_default='true'),
         sa.Column('created_at', sa.DateTime(), nullable=False, server_default=sa.text('now()')),
         sa.Column('updated_at', sa.DateTime(), nullable=False, server_default=sa.text('now()')),

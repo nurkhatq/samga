@@ -40,14 +40,14 @@ MAJORS_DATA = [
         "code": "M003",
         "title_kk": "Математика",
         "title_ru": "Математика",
-        "magistracy_type": MagistracyType.SCIENTIFIC,
+        "magistracy_type": MagistracyType.SCIENTIFIC_PEDAGOGICAL,
         "categories": ["Жаратылыстану"]
     },
     {
         "code": "M004",
         "title_kk": "Физика",
         "title_ru": "Физика",
-        "magistracy_type": MagistracyType.SCIENTIFIC,
+        "magistracy_type": MagistracyType.SCIENTIFIC_PEDAGOGICAL,
         "categories": ["Жаратылыстану"]
     },
     {
@@ -73,11 +73,11 @@ PROFILE_SUBJECTS = {
     ],
     "M003": [
         {"code": "M003_ALGEBRA", "title_kk": "Алгебра", "title_ru": "Алгебра"},
-        {"code": "M003_ANALYSIS", "title_kk": "Анализ", "title_ru": "Анализ"},
+        {"code": "M003_GEOMETRY", "title_kk": "Геометрия", "title_ru": "Геометрия"},
     ],
     "M004": [
         {"code": "M004_MECHANICS", "title_kk": "Механика", "title_ru": "Механика"},
-        {"code": "M004_QUANTUM", "title_kk": "Кванттық физика", "title_ru": "Квантовая физика"},
+        {"code": "M004_THERMODYNAMICS", "title_kk": "Термодинамика", "title_ru": "Термодинамика"},
     ],
     "M005": [
         {"code": "M005_DATABASES", "title_kk": "Дерекқорлар", "title_ru": "Базы данных"},
@@ -87,154 +87,119 @@ PROFILE_SUBJECTS = {
 
 
 async def init_majors():
-    """Инициализировать специальности"""
-    print("\n📚 Инициализация специальностей...")
-    
+    """Инициализация специальностей"""
     async with async_session_maker() as db:
-        try:
-            # Проверяем существующие
-            result = await db.execute(select(func.count(Major.code)))
-            existing_count = result.scalar() or 0
-            
-            if existing_count > 0:
-                print(f"   ℹ️  Уже существует {existing_count} специальностей")
-                overwrite = input("   Перезаписать? (y/N): ").strip().lower()
-                
-                if overwrite != 'y':
-                    print("   ⏭️  Пропуск инициализации специальностей")
-                    return
-            
-            # Создаем специальности
-            created_count = 0
-            
-            for major_data in MAJORS_DATA:
-                # Проверяем существование
-                result = await db.execute(
-                    select(Major).where(Major.code == major_data["code"])
-                )
-                existing = result.scalar_one_or_none()
-                
-                if existing:
-                    print(f"   ⏭️  Специальность {major_data['code']} уже существует")
-                    continue
-                
-                major = Major(**major_data)
-                db.add(major)
-                created_count += 1
-            
-            await db.commit()
-            
-            print(f"   ✅ Создано {created_count} специальностей")
-            
-        except Exception as e:
-            print(f"   ❌ Ошибка: {e}")
-            await db.rollback()
-            raise
+        # Проверяем существующие специальности
+        result = await db.execute(select(func.count(Major.code)))
+        count = result.scalar()
+        
+        if count > 0:
+            print(f"⚠️  В базе уже есть {count} специальностей. Пропускаем...")
+            return
+        
+        print("📚 Инициализация специальностей...")
+        
+        for major_data in MAJORS_DATA:
+            major = Major(**major_data)
+            db.add(major)
+        
+        await db.commit()
+        print(f"✅ Добавлено {len(MAJORS_DATA)} специальностей")
 
 
-async def init_subjects():
-    """Инициализировать предметы"""
-    print("\n📖 Инициализация предметов...")
-    
+async def init_common_subjects():
+    """Инициализация общих предметов (ТГО, Иностранный язык)"""
     async with async_session_maker() as db:
-        try:
-            # Проверяем существующие
-            result = await db.execute(select(func.count(Subject.code)))
-            existing_count = result.scalar() or 0
-            
-            if existing_count > 0:
-                print(f"   ℹ️  Уже существует {existing_count} предметов")
-                overwrite = input("   Перезаписать? (y/N): ").strip().lower()
-                
-                if overwrite != 'y':
-                    print("   ⏭️  Пропуск инициализации предметов")
-                    return
-            
-            created_count = 0
-            
-            # 1. Общие предметы (ТГО, АНГЛ)
-            common_subjects = [
-                {
-                    "code": "TGO",
-                    "title_kk": "Тарих, география және қоғамтану",
-                    "title_ru": "История, география и обществознание",
-                    "subject_type": SubjectType.COMMON,
-                },
-                {
-                    "code": "ENG",
-                    "title_kk": "Шетел тілі (ағылшын)",
-                    "title_ru": "Иностранный язык (английский)",
-                    "subject_type": SubjectType.COMMON,
-                },
-            ]
-            
-            for subject_data in common_subjects:
-                result = await db.execute(
-                    select(Subject).where(Subject.code == subject_data["code"])
+        # Проверяем существующие предметы
+        result = await db.execute(
+            select(func.count(Subject.code)).where(Subject.subject_type == SubjectType.COMMON)
+        )
+        count = result.scalar()
+        
+        if count > 0:
+            print(f"⚠️  В базе уже есть {count} общих предметов. Пропускаем...")
+            return
+        
+        print("📖 Инициализация общих предметов...")
+        
+        common_subjects = [
+            {
+                "code": "TGO",
+                "title_kk": "Тарих, география, құқық",
+                "title_ru": "История, география, право",
+                "subject_type": SubjectType.COMMON,
+                "major_code": None
+            },
+            {
+                "code": "ENG",
+                "title_kk": "Ағылшын тілі",
+                "title_ru": "Английский язык",
+                "subject_type": SubjectType.COMMON,
+                "major_code": None
+            },
+        ]
+        
+        for subject_data in common_subjects:
+            subject = Subject(**subject_data)
+            db.add(subject)
+        
+        await db.commit()
+        print(f"✅ Добавлено {len(common_subjects)} общих предметов")
+
+
+async def init_profile_subjects():
+    """Инициализация профильных предметов"""
+    async with async_session_maker() as db:
+        # Проверяем существующие профильные предметы
+        result = await db.execute(
+            select(func.count(Subject.code)).where(Subject.subject_type == SubjectType.PROFILE)
+        )
+        count = result.scalar()
+        
+        if count > 0:
+            print(f"⚠️  В базе уже есть {count} профильных предметов. Пропускаем...")
+            return
+        
+        print("📝 Инициализация профильных предметов...")
+        
+        total = 0
+        for major_code, subjects in PROFILE_SUBJECTS.items():
+            for subject_data in subjects:
+                subject = Subject(
+                    **subject_data,
+                    subject_type=SubjectType.PROFILE,
+                    major_code=major_code
                 )
-                existing = result.scalar_one_or_none()
-                
-                if existing:
-                    continue
-                
-                subject = Subject(**subject_data)
                 db.add(subject)
-                created_count += 1
-            
-            # 2. Профильные предметы для каждой специальности
-            for major_code, subjects_list in PROFILE_SUBJECTS.items():
-                for subject_data in subjects_list:
-                    result = await db.execute(
-                        select(Subject).where(Subject.code == subject_data["code"])
-                    )
-                    existing = result.scalar_one_or_none()
-                    
-                    if existing:
-                        continue
-                    
-                    subject = Subject(
-                        code=subject_data["code"],
-                        title_kk=subject_data["title_kk"],
-                        title_ru=subject_data["title_ru"],
-                        subject_type=SubjectType.PROFILE,
-                        major_code=major_code
-                    )
-                    db.add(subject)
-                    created_count += 1
-            
-            await db.commit()
-            
-            print(f"   ✅ Создано {created_count} предметов")
-            
-        except Exception as e:
-            print(f"   ❌ Ошибка: {e}")
-            await db.rollback()
-            raise
+                total += 1
+        
+        await db.commit()
+        print(f"✅ Добавлено {total} профильных предметов")
 
 
 async def main():
-    """Главная функция"""
-    print("=" * 60)
-    print("🚀 Инициализация базовых данных Connect AITU")
-    print("=" * 60)
+    """Основная функция"""
+    print("\n" + "=" * 60)
+    print("🎓 Connect AITU - Инициализация базовых данных")
+    print("=" * 60 + "\n")
     
     try:
         await init_majors()
-        await init_subjects()
+        await init_common_subjects()
+        await init_profile_subjects()
         
         print("\n" + "=" * 60)
-        print("✅ Инициализация завершена!")
+        print("✅ Инициализация завершена успешно!")
         print("=" * 60)
+        print("\n📌 Следующие шаги:")
+        print("1. Импортировать вопросы: python scripts/import_questions.py")
+        print("2. Создать администратора: python scripts/create_admin.py")
+        print("\n")
         
-        print("\n💡 Следующие шаги:")
-        print("   1. Импортируйте вопросы: python scripts/import_questions.py")
-        print("   2. Создайте админа: python scripts/create_admin.py")
-        print("   3. Запустите сервер: python -m app.main\n")
-        
-    except KeyboardInterrupt:
-        print("\n\n⚠️ Отменено пользователем")
     except Exception as e:
-        print(f"\n❌ Критическая ошибка: {e}")
+        print(f"\n❌ Ошибка при инициализации: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 

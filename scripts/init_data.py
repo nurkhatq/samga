@@ -61,8 +61,9 @@ async def init_majors():
 async def init_common_subjects():
     """Создание общих предметов"""
     async with async_session_maker() as db:
+        # ИСПРАВЛЕНО: "common" -> "general"
         result = await db.execute(
-            select(func.count(Subject.code)).where(Subject.subject_type == "common")
+            select(func.count(Subject.code)).where(Subject.subject_type == "general")
         )
         if result.scalar() > 0:
             print(f"⚠️  Общие предметы уже созданы")
@@ -75,14 +76,14 @@ async def init_common_subjects():
                 "code": "TGO",
                 "title_kk": "Тарих, география, құқық",
                 "title_ru": "История, география, право",
-                "subject_type": "common",
+                "subject_type": "general",  # ИСПРАВЛЕНО: "common" -> "general"
                 "major_code": None
             },
             {
                 "code": "ENG",
                 "title_kk": "Ағылшын тілі",
                 "title_ru": "Английский язык",
-                "subject_type": "common",
+                "subject_type": "general",  # ИСПРАВЛЕНО: "common" -> "general"
                 "major_code": None
             },
         ]

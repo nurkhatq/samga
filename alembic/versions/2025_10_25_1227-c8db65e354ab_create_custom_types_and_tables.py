@@ -109,6 +109,13 @@ def upgrade() -> None:
     op.drop_index('ix_majors_magistracy_type', table_name='majors')
     op.create_index(op.f('ix_majors_code'), 'majors', ['code'], unique=False)
     
+    # Изменения в subjects - изменяем тип subject_type на ENUM
+    op.execute("""
+        ALTER TABLE subjects 
+        ALTER COLUMN subject_type TYPE subjecttype 
+        USING subject_type::text::subjecttype
+    """)
+    
     # Изменения в proctoring_events
     op.add_column('proctoring_events', sa.Column('product_metadata', sa.JSON(), nullable=False))
     op.alter_column('proctoring_events', 'timestamp',
@@ -136,6 +143,12 @@ def downgrade() -> None:
                type_=postgresql.TIMESTAMP(),
                existing_nullable=False)
     op.drop_column('proctoring_events', 'product_metadata')
+    
+    # Откат типа subject_type обратно на VARCHAR
+    op.execute("""
+        ALTER TABLE subjects 
+        ALTER COLUMN subject_type TYPE VARCHAR
+    """)
     
     # Откат изменений в majors
     op.create_index('ix_majors_magistracy_type', 'majors', ['magistracy_type'], unique=False)

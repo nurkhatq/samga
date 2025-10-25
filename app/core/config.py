@@ -3,12 +3,18 @@
 Использует pydantic-settings для валидации переменных окружения
 """
 from typing import List
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import AnyHttpUrl, PostgresDsn, RedisDsn, field_validator
 
 
 class Settings(BaseSettings):
     """Настройки приложения из переменных окружения"""
+    
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        case_sensitive=True,
+        extra="ignore"
+    )
     
     # ===================================
     # Application
@@ -22,20 +28,23 @@ class Settings(BaseSettings):
     DOMAIN: str = "connect-aitu.me"
     BACKEND_URL: str = "https://connect-aitu.me/api"
     
-    # CORS
+    # CORS - ИСПРАВЛЕНО: убраны дефолтные значения
     CORS_ORIGINS: List[str] = []
     
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod
     def parse_cors_origins(cls, v):
         if isinstance(v, str):
+            # Проверка на пустую строку
+            if not v or v.strip() == "":
+                return []
             # Handle both JSON array and comma-separated string
             if v.startswith("["):
                 import json
                 return json.loads(v)
             else:
-                return [origin.strip() for origin in v.split(",")]
-        return v
+                return [origin.strip() for origin in v.split(",") if origin.strip()]
+        return v if v else []
     
     # ===================================
     # Database (PostgreSQL)
@@ -46,14 +55,15 @@ class Settings(BaseSettings):
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str = "connect_aitu_db"
     
-    DATABASE_URL: PostgresDsn | None = None
+    DATABASE_URL: str = ""
     
     @field_validator("DATABASE_URL", mode="before")
     @classmethod
     def build_database_url(cls, v, info):
         if v:
             return v
-        return f"postgresql+asyncpg://{info.data['POSTGRES_USER']}:{info.data['POSTGRES_PASSWORD']}@{info.data['POSTGRES_HOST']}:{info.data['POSTGRES_PORT']}/{info.data['POSTGRES_DB']}"
+        data = info.data
+        return f"postgresql+asyncpg://{data['POSTGRES_USER']}:{data['POSTGRES_PASSWORD']}@{data['POSTGRES_HOST']}:{data['POSTGRES_PORT']}/{data['POSTGRES_DB']}"
     
     # ===================================
     # Redis
@@ -63,15 +73,16 @@ class Settings(BaseSettings):
     REDIS_PASSWORD: str = ""
     REDIS_DB: int = 0
     
-    REDIS_URL: RedisDsn | None = None
+    REDIS_URL: str = ""
     
     @field_validator("REDIS_URL", mode="before")
     @classmethod
     def build_redis_url(cls, v, info):
         if v:
             return v
-        password_part = f":{info.data['REDIS_PASSWORD']}@" if info.data.get("REDIS_PASSWORD") else ""
-        return f"redis://{password_part}{info.data['REDIS_HOST']}:{info.data['REDIS_PORT']}/{info.data['REDIS_DB']}"
+        data = info.data
+        password_part = f":{data['REDIS_PASSWORD']}@" if data.get("REDIS_PASSWORD") else ""
+        return f"redis://{password_part}{data['REDIS_HOST']}:{data['REDIS_PORT']}/{data['REDIS_DB']}"
     
     # ===================================
     # Celery (RabbitMQ)
@@ -81,23 +92,25 @@ class Settings(BaseSettings):
     RABBITMQ_USER: str = "connect_user"
     RABBITMQ_PASSWORD: str
     
-    CELERY_BROKER_URL: str | None = None
-    CELERY_RESULT_BACKEND: str | None = None
+    CELERY_BROKER_URL: str = ""
+    CELERY_RESULT_BACKEND: str = ""
     
     @field_validator("CELERY_BROKER_URL", mode="before")
     @classmethod
     def build_broker_url(cls, v, info):
         if v:
             return v
-        return f"amqp://{info.data['RABBITMQ_USER']}:{info.data['RABBITMQ_PASSWORD']}@{info.data['RABBITMQ_HOST']}:{info.data['RABBITMQ_PORT']}//"
+        data = info.data
+        return f"amqp://{data['RABBITMQ_USER']}:{data['RABBITMQ_PASSWORD']}@{data['RABBITMQ_HOST']}:{data['RABBITMQ_PORT']}//"
     
     @field_validator("CELERY_RESULT_BACKEND", mode="before")
     @classmethod
     def build_result_backend(cls, v, info):
         if v:
             return v
-        password_part = f":{info.data['REDIS_PASSWORD']}@" if info.data.get("REDIS_PASSWORD") else ""
-        return f"redis://{password_part}{info.data['REDIS_HOST']}:{info.data['REDIS_PORT']}/1"
+        data = info.data
+        password_part = f":{data['REDIS_PASSWORD']}@" if data.get("REDIS_PASSWORD") else ""
+        return f"redis://{password_part}{data['REDIS_HOST']}:{data['REDIS_PORT']}/1"
     
     # ===================================
     # Security
@@ -157,10 +170,6 @@ class Settings(BaseSettings):
     # ===================================
     LOG_LEVEL: str = "INFO"
     LOG_FORMAT: str = "json"
-    
-    class Config:
-        env_file = ".env"
-        case_sensitive = True
 
 
 # Создаем глобальный экземпляр настроек

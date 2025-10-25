@@ -1,0 +1,235 @@
+version: '3.9'
+
+services:
+  # ===================================
+  # PostgreSQL Database
+  # ===================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: connect_aitu_postgres
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - connect_network
+
+  # ===================================
+  # Redis Cache & Sessions
+  # ===================================
+  redis:
+    image: redis:7-alpine
+    container_name: connect_aitu_redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - connect_network
+
+  # ===================================
+  # RabbitMQ Message Broker
+  # ===================================
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: connect_aitu_rabbitmq
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"  # Management UI
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - connect_network
+
+  # ===================================
+  # FastAPI Backend
+  # ===================================
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: connect_aitu_backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND}
+    volumes:
+      - ./app:/app/app
+      - ./alembic:/app/alembic
+      - ./data:/app/data  # Для импорта данных (questions.json, tests.json и т.д.)
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    command: >
+      sh -c "
+        echo 'Ожидание готовности баз данных...' &&
+        sleep 5 &&
+        echo 'Применение миграций...' &&
+        alembic upgrade head &&
+        echo 'Инициализация данных...' &&
+        python -m app.scripts.init_data &&
+        echo 'Запуск сервера...' &&
+        uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - connect_network
+
+  # ===================================
+  # Celery Worker
+  # ===================================
+  celery_worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: connect_aitu_celery_worker
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND}
+    volumes:
+      - ./app:/app/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    command: celery -A app.tasks.celery_app worker --loglevel=info --concurrency=4
+    networks:
+      - connect_network
+
+  # ===================================
+  # Celery Beat (Scheduler)
+  # ===================================
+  celery_beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: connect_aitu_celery_beat
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND}
+    volumes:
+      - ./app:/app/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    command: celery -A app.tasks.celery_app beat --loglevel=info
+    networks:
+      - connect_network
+
+  # ===================================
+  # Nginx Reverse Proxy (with SSL)
+  # ===================================
+  nginx:
+    image: nginx:alpine
+    container_name: connect_aitu_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - certbot_data:/var/www/certbot:ro
+      - certbot_conf:/etc/letsencrypt:ro
+    depends_on:
+      - backend
+    networks:
+      - connect_network
+
+  # ===================================
+  # Certbot (Let's Encrypt SSL)
+  # ===================================
+  certbot:
+    image: certbot/certbot:latest
+    container_name: connect_aitu_certbot
+    volumes:
+      - certbot_data:/var/www/certbot
+      - certbot_conf:/etc/letsencrypt
+    entrypoint: /bin/sh -c "trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;"
+    networks:
+      - connect_network
+
+# ===================================
+# Volumes
+# ===================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  rabbitmq_data:
+    driver: local
+  certbot_data:
+    driver: local
+  certbot_conf:
+    driver: local
+
+# ===================================
+# Networks
+# ===================================
+networks:
+  connect_network:
+    driver: bridge

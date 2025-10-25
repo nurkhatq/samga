@@ -1,0 +1,615 @@
+{
+  "courses": [
+    {
+      "course_id": "COURSE_65894B9B",
+      "course_code": "COURSE_65894B9B",
+      "course_title": "ТГО-ОДАТ",
+      "course_type": "profile",
+      "price": 79990,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 1
+      }
+    },
+    {
+      "course_id": "COURSE_2572EB35",
+      "course_code": "COURSE_2572EB35",
+      "course_title": "Ағылшын тілі",
+      "course_type": "profile",
+      "price": 10000000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 2
+      }
+    },
+    {
+      "course_id": "COURSE_BED93DA8",
+      "course_code": "COURSE_BED93DA8",
+      "course_title": "ТГО РУСС",
+      "course_type": "profile",
+      "price": 64990,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 3
+      }
+    },
+    {
+      "course_id": "COURSE_952542B8",
+      "course_code": "COURSE_952542B8",
+      "course_title": "Англиский язык",
+      "course_type": "profile",
+      "price": 79000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 4
+      }
+    },
+    {
+      "course_id": "COURSE_3FD4FC0E",
+      "course_code": "COURSE_3FD4FC0E",
+      "course_title": "Педагогика",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 5
+      }
+    },
+    {
+      "course_id": "COURSE_BADF8156",
+      "course_code": "COURSE_BADF8156",
+      "course_title": "М001 Психология",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 6
+      }
+    },
+    {
+      "course_id": "COURSE_03DE376E",
+      "course_code": "COURSE_03DE376E",
+      "course_title": "М010 Математика педагогтерін даярлау (Математика)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 7
+      }
+    },
+    {
+      "course_id": "COURSE_BD3791C2",
+      "course_code": "COURSE_BD3791C2",
+      "course_title": "М010 Математика педагогтерін даярлау (Математика оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 8
+      }
+    },
+    {
+      "course_id": "COURSE_8014C153",
+      "course_code": "COURSE_8014C153",
+      "course_title": "М011 Физика педагогтерін даярлау (Жалпы физика)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 9
+      }
+    },
+    {
+      "course_id": "COURSE_9867F3CB",
+      "course_code": "COURSE_9867F3CB",
+      "course_title": "М011 Физика педагогтерін даярлау (Физика оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 10
+      }
+    },
+    {
+      "course_id": "COURSE_2A98AC3E",
+      "course_code": "COURSE_2A98AC3E",
+      "course_title": "М012 Информатика педагогтерін даярлау (Бағдарламалау)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 11
+      }
+    },
+    {
+      "course_id": "COURSE_BE5A5888",
+      "course_code": "COURSE_BE5A5888",
+      "course_title": "М012 Информатика педагогтерін даярлау (Информатиканы оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 12
+      }
+    },
+    {
+      "course_id": "COURSE_64DBACB6",
+      "course_code": "COURSE_64DBACB6",
+      "course_title": "М013 Химия педагогтерін даярлау(Химия)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 13
+      }
+    },
+    {
+      "course_id": "COURSE_C2F90865",
+      "course_code": "COURSE_C2F90865",
+      "course_title": "М013 Химия педагогтерін даярлау(Химия оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 14
+      }
+    },
+    {
+      "course_id": "COURSE_067A5DBD",
+      "course_code": "COURSE_067A5DBD",
+      "course_title": "М014 Биология педагогтерін даярлау(Биология)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 15
+      }
+    },
+    {
+      "course_id": "COURSE_DF603A42",
+      "course_code": "COURSE_DF603A42",
+      "course_title": "М014 Биология педагогтерін даярлау (Биологияны оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 16
+      }
+    },
+    {
+      "course_id": "COURSE_02152150",
+      "course_code": "COURSE_02152150",
+      "course_title": "М015 География педагогтерін даярлау(География)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 17
+      }
+    },
+    {
+      "course_id": "COURSE_16094527",
+      "course_code": "COURSE_16094527",
+      "course_title": "М015 География педагогтерін даярлау (Географияны оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 18
+      }
+    },
+    {
+      "course_id": "COURSE_4C177289",
+      "course_code": "COURSE_4C177289",
+      "course_title": "М016 Тарих педагогтерін даярлау (Қазақстан тарихы)",
+      "course_type": "profile",
+      "price": 0,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 19
+      }
+    },
+    {
+      "course_id": "COURSE_B8899FED",
+      "course_code": "COURSE_B8899FED",
+      "course_title": "М016 Тарих педагогтерін даярлау (Тарихты оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 0,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 20
+      }
+    },
+    {
+      "course_id": "COURSE_7B43873B",
+      "course_code": "COURSE_7B43873B",
+      "course_title": "М017 Қазақ тілі мен әдебиетінің (Қазақ тілін оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 21
+      }
+    },
+    {
+      "course_id": "COURSE_55EF30EF",
+      "course_code": "COURSE_55EF30EF",
+      "course_title": "М018 Орыс тілі мен әдебиетінің мұғалімдерін даярлау (Орыс тілін оқыту әдістемесі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 22
+      }
+    },
+    {
+      "course_id": "COURSE_E2F31D62",
+      "course_code": "COURSE_E2F31D62",
+      "course_title": "Кәсіби бағытталған шет тілі",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 23
+      }
+    },
+    {
+      "course_id": "COURSE_ABAE684F",
+      "course_code": "COURSE_ABAE684F",
+      "course_title": "М020 Әлеуметтік педагогтарды даярлау (Әлеуметтік педагогика)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 24
+      }
+    },
+    {
+      "course_id": "COURSE_1F7FB219",
+      "course_code": "COURSE_1F7FB219",
+      "course_title": "М020 Әлеуметтік педагогтарды даярлау (Әлеуметтік психологиялық теория пәні, оның психологиялық ғылымдағы маңызы мен орны)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 25
+      }
+    },
+    {
+      "course_id": "COURSE_665BA1D0",
+      "course_code": "COURSE_665BA1D0",
+      "course_title": "М021 Арнайы педагогика (Арнайы педагогика)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 26
+      }
+    },
+    {
+      "course_id": "COURSE_C5B41F80",
+      "course_code": "COURSE_C5B41F80",
+      "course_title": "М021 Арнайы педагогика(Инклюзивті білім беру)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 27
+      }
+    },
+    {
+      "course_id": "COURSE_C73543A9",
+      "course_code": "COURSE_C73543A9",
+      "course_title": "Қазақстанның ежелгі және ортағасырлар тарихы",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 28
+      }
+    },
+    {
+      "course_id": "COURSE_F035FD53",
+      "course_code": "COURSE_F035FD53",
+      "course_title": "Археология негіздері",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 29
+      }
+    },
+    {
+      "course_id": "COURSE_8196FDBF",
+      "course_code": "COURSE_8196FDBF",
+      "course_title": "М056 Аударма ісі, ілеспе аударма (Аударма теориясы)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 30
+      }
+    },
+    {
+      "course_id": "M059",
+      "course_code": "M059",
+      "course_title": "M059 Шетел филологиясы (Тіл теориясының негіздері)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 31
+      }
+    },
+    {
+      "course_id": "COURSE_15995953",
+      "course_code": "COURSE_15995953",
+      "course_title": "М060 Филология (Қазіргі қазақ тілі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 32
+      }
+    },
+    {
+      "course_id": "COURSE_BE47AC52",
+      "course_code": "COURSE_BE47AC52",
+      "course_title": "М060 Филология (Қазіргі қазақ әдебиеті)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 33
+      }
+    },
+    {
+      "course_id": "COURSE_52B5C6D9",
+      "course_code": "COURSE_52B5C6D9",
+      "course_title": "М063 Саясаттану және конфликтология (Саясат теориясы)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 34
+      }
+    },
+    {
+      "course_id": "COURSE_D8C47554",
+      "course_code": "COURSE_D8C47554",
+      "course_title": "М063 Саясаттану және конфликтология (Қолданбалы саясаттану)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 35
+      }
+    },
+    {
+      "course_id": "COURSE_B7A7F552",
+      "course_code": "COURSE_B7A7F552",
+      "course_title": "М064 Халықаралық қатынастар (Қазақстан Республикасының сыртқы саясаты)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 36
+      }
+    },
+    {
+      "course_id": "COURSE_8D0C8869",
+      "course_code": "COURSE_8D0C8869",
+      "course_title": "М066 Психология (Даму психология)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 38
+      }
+    },
+    {
+      "course_id": "COURSE_4F4706B4",
+      "course_code": "COURSE_4F4706B4",
+      "course_title": "М066 Психология (Жалпы психология)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 37
+      }
+    },
+    {
+      "course_id": "COURSE_CBB0D797",
+      "course_code": "COURSE_CBB0D797",
+      "course_title": "М067 Журналистика және репортерлық іс (Қазақ журналистикасының тарихы)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 39
+      }
+    },
+    {
+      "course_id": "COURSE_BF5C4136",
+      "course_code": "COURSE_BF5C4136",
+      "course_title": "М067 Журналистика және репортерлық іс (Қазіргі журналистиканың жанрлық түрі мен қызметі)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 40
+      }
+    },
+    {
+      "course_id": "COURSE_08A30832",
+      "course_code": "COURSE_08A30832",
+      "course_title": "М070 Экономика (Кәсіпорын экономикасы)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 41
+      }
+    },
+    {
+      "course_id": "COURSE_E8A942B1",
+      "course_code": "COURSE_E8A942B1",
+      "course_title": "М070 Экономика(Макроэкономика)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 42
+      }
+    },
+    {
+      "course_id": "COURSE_BCADBA87",
+      "course_code": "COURSE_BCADBA87",
+      "course_title": "М071 Мемлекеттік және жергілікті басқару (Мемлекеттік басқару теориясы)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 43
+      }
+    },
+    {
+      "course_id": "COURSE_5241A71E",
+      "course_code": "COURSE_5241A71E",
+      "course_title": "М071 Мемлекеттік және жергілікті басқару (Экономиканы мемлекеттік реттеу)",
+      "course_type": "profile",
+      "price": 35000,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 44
+      }
+    },
+    {
+      "course_id": "COURSE_3A333854",
+      "course_code": "COURSE_3A333854",
+      "course_title": "Курс М120",
+      "course_type": "profile",
+      "price": 79990,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 45
+      }
+    },
+    {
+      "course_id": "M120",
+      "course_code": "M120",
+      "course_title": "M120 Маркшейдерлік іс",
+      "course_type": "profile",
+      "price": 79990,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 46
+      }
+    },
+    {
+      "course_id": "COURSE_8A2FD973",
+      "course_code": "COURSE_8A2FD973",
+      "course_title": "Курс М122",
+      "course_type": "profile",
+      "price": 79990,
+      "chapters": [],
+      "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-10-21T18:38:08.258427",
+        "migrated_from_old_id": 47
+      }
+    }
+  ]
+}

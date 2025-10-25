@@ -1,0 +1,268 @@
+{
+  "chapters": [
+    {
+      "chapter_id": "CH_0001",
+      "chapter_title": "1-тақырып. Геодезияда қабылданған биіктік және координата жүйесі",
+      "course_id": "COURSE_45",
+      "order": 1,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "15a30307-5492-47ec-8661-a49ff85c181d",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0002",
+      "chapter_title": "2-тақырып. Карта бойынша тапсырмаларды шешу",
+      "course_id": "COURSE_45",
+      "order": 2,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "3f2cfe2f-f1c1-420d-9202-a02e5cf86c45",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0003",
+      "chapter_title": "3-тақырып. Геодезиялық торлар",
+      "course_id": "COURSE_45",
+      "order": 3,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "7c196a8f-4888-43eb-b4b9-c5e4eea0dd9b",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0004",
+      "chapter_title": "4-тақырып. Топографиялық түсіріс",
+      "course_id": "COURSE_45",
+      "order": 4,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "68cd9622-a8ce-4e82-9195-f26f5a4c5b73",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0005",
+      "chapter_title": "5-тақырып. Геодезиялық өлшеулер",
+      "course_id": "COURSE_45",
+      "order": 5,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "a6a4f836-9ff7-4402-9a85-88d3c493a5e6",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0006",
+      "chapter_title": "1-тақырып. Шахтадағы теодолиттік түсіріс",
+      "course_id": "COURSE_46",
+      "order": 6,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "3ec5921b-8fd0-4e16-8586-c83add6abbdb",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0007",
+      "chapter_title": "2-тақырып. Байланыстырушы түсірістер",
+      "course_id": "COURSE_46",
+      "order": 7,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "aba1e88e-51d4-4ea6-9e26-3084c6b25b3b",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0008",
+      "chapter_title": "3-тақырып. Екі вертикаль оқпан арқылы бағдарлау",
+      "course_id": "COURSE_46",
+      "order": 8,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "8b092c6b-a53b-46ab-8cd6-1ca37a382404",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0009",
+      "chapter_title": "4-тақырып. Тау-кен қазбасы бойынша геометриялық нивелирлеу",
+      "course_id": "COURSE_46",
+      "order": 9,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "8e592219-fe2d-4983-9c7c-03a8abb3bb6b",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0010",
+      "chapter_title": "5-тақырып. Тау-кен қазбасына екі жазықтықта бағыт беру",
+      "course_id": "COURSE_46",
+      "order": 10,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "ca868ced-522a-4777-8fe1-df4fefdf959b",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0011",
+      "chapter_title": "1-тақырып. Қала құрылысын жобалау жалпы ережелер мен анықтамалар",
+      "course_id": "COURSE_47",
+      "order": 11,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "ca20360e-0669-4d74-9c71-44dbb509a0ce",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0012",
+      "chapter_title": "2-тақырып. Қала құрылысын жобалау нормативтері және регламенттеу",
+      "course_id": "COURSE_47",
+      "order": 12,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "6dfb7fdb-1178-4831-897f-2f4a43fc2ffa",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0013",
+      "chapter_title": "3-тақырып. Қала құрылысы тарихы",
+      "course_id": "COURSE_47",
+      "order": 13,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "197785de-2264-49b8-b064-f18f55c05223",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0014",
+      "chapter_title": "4-тақырып. Қалалық көлік жобалау нормативтері және регламенттеу",
+      "course_id": "COURSE_47",
+      "order": 14,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "1ff42d18-5bda-47e0-b490-c1b2fee8f55c",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0015",
+      "chapter_title": "5-тақырып. Ландшафттық жобалау нормативтері және регламенттеу",
+      "course_id": "COURSE_47",
+      "order": 15,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "a95bdc98-fb1f-46ff-8881-944232452491",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0016",
+      "chapter_title": "6-тақырып. Сәулет-қалақұрылысы композиция анықтамалар мен терминдер",
+      "course_id": "COURSE_47",
+      "order": 16,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "d4e2fad3-b130-4e91-b997-8f69329369aa",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0017",
+      "chapter_title": "7-тақырып.Тұрақты даму тұжырымдамасы",
+      "course_id": "COURSE_47",
+      "order": 17,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "3aa084f1-3288-43aa-9b14-e60c75972104",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0018",
+      "chapter_title": "1-тақырып. Сәулеттік жобалаудағы жалпы талаптар",
+      "course_id": "COURSE_47",
+      "order": 18,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "187e1446-042c-46ad-a2cd-f96e154f8277",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0019",
+      "chapter_title": "2-тақырып. Тұрғын үй құрылысы",
+      "course_id": "COURSE_47",
+      "order": 19,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "ef145773-cc87-4827-bdfc-05d8cf5edf24",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0020",
+      "chapter_title": "3-тақырып. Қоғамдық ғимараттардың сәулеті",
+      "course_id": "COURSE_47",
+      "order": 20,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "53277aa4-580f-4c58-a542-b5b517a51c27",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0021",
+      "chapter_title": "4-тақырып. Өнеркәсіптік құрылыс сәулеті",
+      "course_id": "COURSE_47",
+      "order": 21,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "aa8ec3fc-2f48-43d1-820b-46e88531218c",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0022",
+      "chapter_title": "5-тақырып. Ауыл шаруашылығы кәсіпорындарының сәулеті",
+      "course_id": "COURSE_47",
+      "order": 22,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "4ec79b66-028c-48f0-9392-61312c713eb4",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0023",
+      "chapter_title": "6-тақырып. Сәулеттік типологияның жалпы ережелері мен анықтамалары",
+      "course_id": "COURSE_47",
+      "order": 23,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "c5586866-0c5b-4025-adf6-79c031425ad1",
+      "estimated_time_minutes": 90
+    },
+    {
+      "chapter_id": "CH_0024",
+      "chapter_title": "7-тақырып. Сәулеттік кеңістіктердің түрлері",
+      "course_id": "COURSE_47",
+      "order": 24,
+      "lessons_count": 1,
+      "video_links": [],
+      "has_test": true,
+      "test_id": "1061cb5e-18bd-4df2-b08d-c2e5fc298463",
+      "estimated_time_minutes": 90
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+FROM python:3.11-slim
+
+# Метаданные
+LABEL maintainer="Connect AITU Team"
+LABEL version="1.0.0"
+
+# Установка системных зависимостей
+RUN apt-get update && apt-get install -y \
+    gcc \
+    postgresql-client \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Создание рабочей директории
+WORKDIR /app
+
+# Копирование зависимостей
+COPY requirements.txt .
+
+# Установка Python зависимостей
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Копирование приложения
+COPY app/ ./app/
+COPY alembic/ ./alembic/
+COPY alembic.ini .
+
+# Создание непривилегированного пользователя
+RUN adduser --disabled-password --gecos '' appuser && \
+    chown -R appuser:appuser /app
+
+# Переключение на пользователя
+USER appuser
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+# Порт
+EXPOSE 8000
+
+# Команда запуска (переопределяется в docker-compose.yml)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

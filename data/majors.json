@@ -1,0 +1,3754 @@
+{
+  "majors": [
+    {
+      "major_id": "M001",
+      "major_code": "M001",
+      "major_title": "M001 - Педагогика және Психология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M001_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M001_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "Психология",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M002",
+      "major_code": "M002",
+      "major_title": "M002 Мектепке дейінгі оқыту және тәрбиелеу",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M002_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M002 Мектепке дейінгі педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M002_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M002 Мектепке дейінгі жастағы балалардың тілін дамыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M003",
+      "major_code": "M003",
+      "major_title": "M003 Пәндік мамандандырылмаған педагогтерді даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M003_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M003 Педагогика (бастауыш сыныптар үшін)",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M003_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M003 Бастауыш сыныптарда математиканы оқыту әдістемес",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M004",
+      "major_code": "M004",
+      "major_title": "M004 Бастапқы әскери дайындық педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M004_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M004 Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M004_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M004 Бастапқы әскери дайындықты оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M005",
+      "major_code": "M005",
+      "major_title": "M005 Дене шынықтыру педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M005_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M005 Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M005_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M005 Дене шынықтыру теориясы мен әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M006",
+      "major_code": "M006",
+      "major_title": "M006 Музыка педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M006_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M006 Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M006_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M006 Музыка пәнін оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M007",
+      "major_code": "M007",
+      "major_title": "M007 Көркем еңбек, графика және жобалау педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M007_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M007 Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M007_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M007 Көркем еңбек, графика және жобалауды оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M008",
+      "major_code": "M008",
+      "major_title": "M008 Кәсіптік оқыту педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M008_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M008 Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M008_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M008 Кәсіптік оқытудың заманауи технологиялары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M009",
+      "major_code": "M009",
+      "major_title": "M009 Құқық және экономика негіздері",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M009_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M009 Мемлекет және құқық теориясы негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M009_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M009 Құқық және экономика негіздерін оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M010",
+      "major_code": "M010",
+      "major_title": "M010 Математика педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M010_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M010 Математика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M010_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M010 Математиканы оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M011",
+      "major_code": "M011",
+      "major_title": "M011 Физика педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M011_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M011 Жалпы физика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M011_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M011 Физиканы оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M012",
+      "major_code": "M012",
+      "major_title": "M012 Информатика педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M012_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M012 Бағдарламалау",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M012_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M012 Информатиканы оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M013",
+      "major_code": "M013",
+      "major_title": "M013 Химия педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M013_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M013 Химия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M013_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M013 Химияны оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M014",
+      "major_code": "M014",
+      "major_title": "M014 Биология педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M014_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M014 Биология",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M014_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M014 Биологияны оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M015",
+      "major_code": "M015",
+      "major_title": "M015 География педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M015_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M015 География",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M015_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M015 Географияны оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M016",
+      "major_code": "M016",
+      "major_title": "M016 Тарих педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M016_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M016 Қазақстан тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M016_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M016 Тарихты оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M017",
+      "major_code": "M017",
+      "major_title": "M017 Қазақ тілі мен әдебиетінің педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M017_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M017 Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M017_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M017 Қазақ тілін оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M018",
+      "major_code": "M018",
+      "major_title": "M018 Орыс тілі мен әдебиетінің педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M018_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M018 Педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M018_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M018 Орыс тілін оқыту әдістемесі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M019",
+      "major_code": "M019",
+      "major_title": "M019 Шет тілдері педагогтерін даярлау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M019_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M019 Педагогика (қазақ, орыс, ағылшын тілі)",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M019_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M019 Кәсіби бағытталған шет тілі (ағылшын, француз, неміс тілдері)",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M020",
+      "major_code": "M020",
+      "major_title": "M020 Әлеуметтік педагогтарды даярла",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M020_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M020 Әлеуметтік педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M020_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M020 Әлеуметтік психология",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M021",
+      "major_code": "M021",
+      "major_title": "M021 Арнайы педагогика",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M021_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M021 Арнайы педагогика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M021_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M021 Инклюзивті білім беру",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M050",
+      "major_code": "M050",
+      "major_title": "M050 Философия және әдеп",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M050_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M050 Қазақ философиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M050_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M050 Әлеуметтік философия",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M051",
+      "major_code": "M051",
+      "major_title": "M051 Дінтану және теология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M051_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M051 Діндер тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M051_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M051 Қазіргі дәстүрден тыс діни қозғалыстар және культтер",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M052",
+      "major_code": "M052",
+      "major_title": "M052 Исламтану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M052_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M052 Діндер тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M052_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M052 Қазақстандағы қазіргі діни жағдай",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M053",
+      "major_code": "M053",
+      "major_title": "M053 Тарих",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M053_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M053 Қазақстанның ежелгі және ортағасырлар тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M053_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M053 Археология негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M054",
+      "major_code": "M054",
+      "major_title": "M054 Түркітану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M054_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M054 Түркі тілдерінің салыстырмалы-тарихи грамматикасы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M054_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M054 Түркі халықтарының жалпы тарихы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M055",
+      "major_code": "M055",
+      "major_title": "M055 Шығыстану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M055_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M055 Классикалық және қазіргі шығыстану",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M055_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M055 Шығыс елдерінің жаңа және қазіргі заман тарихы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M056",
+      "major_code": "M056",
+      "major_title": "M056 Аударма ісі, ілеспе аударма",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M056_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M056 Аударма теориясы (ағылшын,орыс, қазақ, корей,қытай, жапон тілдері)",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M056_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M056 Кәсіби-бағытталған шет тілі (ағылшын)",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M057",
+      "major_code": "M057",
+      "major_title": "M057 Лингвистика",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M057_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M057 Жалпы тіл білімі",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M057_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M057 Лингвистика ілімінің тарихы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M058",
+      "major_code": "M058",
+      "major_title": "M058 Әдебиет",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M058_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M058 Фольклор",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M058_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M058 Әдебиет теориясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M059",
+      "major_code": "M059",
+      "major_title": "M059 Шетел филологиясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M059_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M059 Тіл теориясының негіздері (ағылшын, неміс, француз, корей, қытай, жапон тілдері)",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M059_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M059 Кәсіби-бағытталған шет тілі (ағылшын, неміс, француз тілдері)",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M060",
+      "major_code": "M060",
+      "major_title": "M060 Филология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M060_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M060 Қазіргі қазақ тілі",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M060_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M060 Қазіргі қазақ әдебиеті",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M061",
+      "major_code": "M061",
+      "major_title": "M061 Әлеуметтану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M061_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M061 Әлеуметтану тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M061_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M061 Әлеуметтанулық зерттеулерді жоспарлау және ұйымдастыру",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M062",
+      "major_code": "M062",
+      "major_title": "M062 Мәдениеттану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M062_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M062 Қазақ мәдениетінің тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M062_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M062 Мәдени антропология",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M063",
+      "major_code": "M063",
+      "major_title": "M063 Саясаттану және конфликтология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M063_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M063 Саясат теориясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M063_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M063 Қолданбалы саясаттану",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M064",
+      "major_code": "M064",
+      "major_title": "M064 Халықаралық қатынастар",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M064_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M064 Қазақстан Республикасының сыртқы саясаты",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M064_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M064 Дипломатиялық және консулдық қызмет",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M065",
+      "major_code": "M065",
+      "major_title": "M065 Аймақтану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M065_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M065 Қазақстан Республикасының сыртқы саясаты",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M065_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M065 Халықаралық қатынастар жүйесіндегі аймақтардың қазіргі мәселелері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M066",
+      "major_code": "M066",
+      "major_title": "M066 Психология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M066_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M066 Жалпы психология",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M066_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M066 Даму психологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M067",
+      "major_code": "M067",
+      "major_title": "M067 Журналистика және репортерлық іс",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M067_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M067 Қазақ журналистикасының тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M067_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M067 Қазіргі журналистиканың жанрлық түрі мен қызметі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M068",
+      "major_code": "M068",
+      "major_title": "M068 Қоғаммен байланыс",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M068_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M068 PR теориясы мен тәжірибесі",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M068_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M068 Имиджелогия",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M069",
+      "major_code": "M069",
+      "major_title": "M069 Кітапхана ісі, ақпаратты өңдеу және архив ісі",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M069_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M069 Құжаттану",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M069_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M069 Археография",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M070",
+      "major_code": "M070",
+      "major_title": "M070 Экономика",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M070_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M070 Кәсіпорын экономикасы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M070_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M070 Макроэкономика",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M071",
+      "major_code": "M071",
+      "major_title": "M071 Мемлекеттік және жергілікті басқару",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M071_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M071 Мемлекеттік басқару теориясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M071_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M071 Экономиканы мемлекеттік реттеу",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M072",
+      "major_code": "M072",
+      "major_title": "M072 Менеджмент",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M072_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M072 Менеджмент",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M072_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M072 Бизнесті ұйымдастыру",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M073",
+      "major_code": "M073",
+      "major_title": "M073 Аудит және салық салу",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M073_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M073 Бухгалтерлік есеп негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M073_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M073 Аудит",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M074",
+      "major_code": "M074",
+      "major_title": "M074 Қаржы, банктік және сақтандыру ісі",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M074_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M074 Қаржы негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M074_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M074 Корпоративтік қаржы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M075",
+      "major_code": "M075",
+      "major_title": "M075 Маркетинг және жарнама",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M075_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M075 Маркетинг",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M075_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M075 Маркетингтік зерттеулер",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M076",
+      "major_code": "M076",
+      "major_title": "M076 Еңбек дағдылары",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M076_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M076 Экономикалық теория",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M076_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M076 Макроэкономика",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M077",
+      "major_code": "M077",
+      "major_title": "M077 Бағалау",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M077_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M077 Экономика және жылжымайтын мүлікті басқару",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M077_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M077 Қазақстан Республикасының Ұлттық бағалау стандарттары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M078",
+      "major_code": "M078",
+      "major_title": "M078 Құқық",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M078_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M078 Мемлекет және құқық теориясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M078_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M078 Ситуациялық кейс (Қазақстан Республикасының заңдарын және / немесе халықаралық құқықты қолдану негізінде нақты практикалық жағдайды кешенді құқықтық талдау)",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M079",
+      "major_code": "M079",
+      "major_title": "M079 Сот сараптамасы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M079_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M079 Криминалистика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M079_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M079 Сот экспертологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M080",
+      "major_code": "M080",
+      "major_title": "M080 Биология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M080_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M080 Клетка биологиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M080_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M080 Ботаника",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M081",
+      "major_code": "M081",
+      "major_title": "M081 Генетика",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M081_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M081 Клетка биологиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M081_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M081 Молекулалық генетика негізімен жалпы генетика",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M082",
+      "major_code": "M082",
+      "major_title": "M082 Биотехнология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M082_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M082 Биохимия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M082_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M082 Биотехнология негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M083",
+      "major_code": "M083",
+      "major_title": "M083 Геоботаника",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M083_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M083 Қазақстан биоресурстары",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M083_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M083 Ботаника",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M084",
+      "major_code": "M084",
+      "major_title": "M084 География",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M084_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M084 Қазақстанның физикалық географиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M084_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M084 Дүниежүзінің экономикалық, әлеуметтік және саяси географиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M085",
+      "major_code": "M085",
+      "major_title": "M085 Гидрология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M085_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M085 Гидрология негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M085_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M085 Гидрологиялық ақпаратты статистикалық өңдеудің заманауи әдістері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M086",
+      "major_code": "M086",
+      "major_title": "M086 Метеорология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M086_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M086 Физикалық метеорология",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M086_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M086 Климатология",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M087",
+      "major_code": "M087",
+      "major_title": "M087 Қоршаған ортаны қорғау технологиясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M087_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M087 Геоэкология",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M087_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M087 Экологиялық мониторинг",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M088",
+      "major_code": "M088",
+      "major_title": "M088 Гидрогеология және инженерлік геология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M088_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M088 Жер асты суларын іздеу және барлау",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M088_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M088 Инженерлік-геологиялық зерттеулер",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M089",
+      "major_code": "M089",
+      "major_title": "M089 Химия",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M089_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M089 Физикалық химия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M089_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M089 Аналитикалық химия",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M090",
+      "major_code": "M090",
+      "major_title": "M090 Физика",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M090_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M090 Механика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M090_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M090 Молекулалық физика",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M091",
+      "major_code": "M091",
+      "major_title": "M091 Сейсмология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M091_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M091 Сейсмологияның физикалық негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M091_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M091 Сейсмикалық жазбалар бойынша жер сілкінудің параметрлерін анықтау",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M092",
+      "major_code": "M092",
+      "major_title": "M092 Математика және статистика",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M092_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M092 Математикалық талдау",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M092_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M092 Дифференциалдық теңдеулер",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M093",
+      "major_code": "M093",
+      "major_title": "M093 Механика",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M093_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M093 Теориялық механика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M093_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M093 Тұтас орта механикасына кіріспе",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M094",
+      "major_code": "M094",
+      "major_title": "M094 Ақпараттық технологиялар",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M094_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M094 Алгоритмдер және деректер құрылымы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M094_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M094 Деректер базасы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M095",
+      "major_code": "M095",
+      "major_title": "M095 Ақпараттық қауіпсіздік",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M095_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M095 Алгоритмдік бағдарламалау тілдері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M095_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M095 Ақпараттық қауіпсіздік негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M096",
+      "major_code": "M096",
+      "major_title": "M096 Коммуникация және коммуникациялық технологиялар",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M096_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M096 Электрлік байланыс теориясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M096_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M096 Радиотехника және телекоммуникация негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M097",
+      "major_code": "M097",
+      "major_title": "M097 Химиялық инженерия және процесстер",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M097_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M097 Бейорганикалық химия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M097_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M097 Жалпы химиялық технология",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M098",
+      "major_code": "M098",
+      "major_title": "M098 Жылу энергетикасы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M098_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M098 Жылу техникасының теориялық негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M098_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M098 Қазандық қондырғылар және жылулық қозғалтқыштар",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M099",
+      "major_code": "M099",
+      "major_title": "M099 Энергетика және электр техникасы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M099_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M099 Электр техниканың теориялық негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M099_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M099 Электр машиналары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M100",
+      "major_code": "M100",
+      "major_title": "M100 Автоматтандыру және басқару",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M100_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M100 Электртехниканың теориялық негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M100_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M100 Сызықты автоматты реттеу жүйелері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M101",
+      "major_code": "M101",
+      "major_title": "M101 Материалтану және жаңа материалдар технологиясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M101_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M101 Механика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M101_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M101 Молекулалық физика",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M102",
+      "major_code": "M102",
+      "major_title": "M102 Роботты техника және мехатроника",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M102_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M102 Электроника негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M102_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M102 Интегралдық және микропроцессорлық схемотехника",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M103",
+      "major_code": "M103",
+      "major_title": "M103 Механика және металл өңдеу",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M103_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M103 Өзара алмасымдылық негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M103_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M103 Машина бөлшектері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M104",
+      "major_code": "M104",
+      "major_title": "M104 Көлік, көліктік техника және технология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M104_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M104 Көлік техникасын техникалық пайдалану негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M104_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M104 Көлік техникасының энергетикалық қондырғылары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M105",
+      "major_code": "M105",
+      "major_title": "M105 Авиациалық техника және технологиялар",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M105_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M105 Ұшу аппараттарының құрылысы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M105_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M105 Авиациалық техниканың теориялық негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M106",
+      "major_code": "M106",
+      "major_title": "M106 Ұшатын аппараттар мен қозғалтқыштарды ұшуда пайдалану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M106_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M106 Ұшу аппараттарының құрылысы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M106_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M106 Авиациялық апаттарды тергеу және ұшу қауіпсіздігі",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M107",
+      "major_code": "M107",
+      "major_title": "M107 Ғарыштық инженерия",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M107_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M107 Физика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M107_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M107  Математика",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M108",
+      "major_code": "M108",
+      "major_title": "M108 Наноматериалдар және нанотехнологиялар (қолдану саласы бойынша)",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M108_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M108 Механика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M108_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M108 Нанотехнология негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M109",
+      "major_code": "M109",
+      "major_title": "M109 Мұнай және кен геофизикасы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M109_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M109 Далалық және ұңғымаларды геофизикалық зерттеудің теориялық негіздеріне кіріспе",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M109_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M109 Далалық және ұңғымаларды геофизикалық зерттеулерді өңдеу мен интерпретациялауды жүргізудің әдісі, техникасы мен технологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M110",
+      "major_code": "M110",
+      "major_title": "M110 Теңіз техникасы және технологиялары",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M110_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M110 Кемелердегі қызметті ұйымдастыру негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M110_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M110 Кеме құрылымы мен теориясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M111",
+      "major_code": "M111",
+      "major_title": "M111 Тамақ өнімдерін өндіру",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M111_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M111 Тамақ өндірісінің жалпы технологиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M111_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M111 Химия",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M112",
+      "major_code": "M112",
+      "major_title": "M112 Ағаш өңдеу және ағаштан жасалған бұйымдар технологиясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M112_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M112 Ағаш өңдейтін жабдықтар",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M112_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M112 Ағаштан бұйым жасау технологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M113",
+      "major_code": "M113",
+      "major_title": "M113 Материалдарды қысыммен өңдеу технологиясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M113_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M113 Физика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M113_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M113 Материалдардың механикалық қасиеттері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M114",
+      "major_code": "M114",
+      "major_title": "M114 Тоқыма: киім, аяқ-киім және былғары бұйымдар",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M114_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M114 Жеңіл өнеркәсіп бұйымдарының материалтануы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M114_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M114 Киімге арналған материалдарды конфекционерлеу",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M115",
+      "major_code": "M115",
+      "major_title": "M115 Мұнай инженериясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M115_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M115 Мұнай және газ ұңғымаларын бұрғылау",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M115_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M115 Мұнай өңдірудің технологиясы мен техникасы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M116",
+      "major_code": "M116",
+      "major_title": "M116 Тау-кен инженериясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M116_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M116 Тау-кен өңдірісінің негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M116_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M116 Тау-кен кәсіпорындарының құрылысы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M117",
+      "major_code": "M117",
+      "major_title": "M117 Металлургиялық инженерия",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M117_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M117 Металлургиялық процесстерінің теориясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M117_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M117 Жалпы металлургия",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M118",
+      "major_code": "M118",
+      "major_title": "M118 Пайдалы қазбалар байыту",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M118_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M118 Пайдалы қазбаларды байыту негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M118_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M118 Флотациялық байыту әдістері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M119",
+      "major_code": "M119",
+      "major_title": "M119 Фармацевтикалық өндіріс технологиясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M119_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M119 Дәрілердің өнеркәсіптік технологиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M119_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M119 Синтетикалық дәрілік заттардың химиясы және технологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M120",
+      "major_code": "M120",
+      "major_title": "M120 Маркшейдерлік іс",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M120_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M120 Геодезия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M120_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M120 Маркшейдерлік істің жалпы курсы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M121",
+      "major_code": "M121",
+      "major_title": "M121 Геология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M121_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M121 Жалпы және тарихи геология",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M121_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M121 Пайдалы қазба кен орындарының геологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M122",
+      "major_code": "M122",
+      "major_title": "M122 Сәулет",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M122_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M122 Сәулеттік типология",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M122_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M122 Қала құрылыс негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M123",
+      "major_code": "M123",
+      "major_title": "M123 Геодезия",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M123_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M123 Геодезия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M123_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M123 Картография",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M124",
+      "major_code": "M124",
+      "major_title": "M124 Құрылыс",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M124_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M124 Құрылыс материалдары",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M124_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M124 Құрылыс өндірісінің технологиясы 1",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M125",
+      "major_code": "M125",
+      "major_title": "M125 Құрылыс материалдарының, бұйымдарының және құрастырылымдарының өндірісі",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M125_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M125 Құрылыс материалдары",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M125_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M125 Бетон технологиясы 1",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M126",
+      "major_code": "M126",
+      "major_title": "M126 Көлік құрылысы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M126_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M126 Құрылыс материалдары",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M126_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M126 Көлік құрылымдарының құрылысын ұйымдастыру және жоспарлау",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M127",
+      "major_code": "M127",
+      "major_title": "M127 Инженерлік жүйелер мен желілер",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M127_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M127 Құрылыс материалдары",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M127_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M127 Құрылыс жинақтау жұмыстарының технологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M128",
+      "major_code": "M128",
+      "major_title": "M128 Жерге орналастыру",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M128_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M128 Геодезия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M128_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M128 Жер ресурстарын басқару",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M129",
+      "major_code": "M129",
+      "major_title": "M129 Гидротехникалық құрылыс",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M129_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M129 Гидравлика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M129_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M129 Гидротехникалық құрылымдар",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M130",
+      "major_code": "M130",
+      "major_title": "M130 Стандарттау, сертификаттау және метрология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M130_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M130 Квалиметрия",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M130_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M130 Сынаудан өткізу, өнім қауіпсіздігі мен бақыла",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M131",
+      "major_code": "M131",
+      "major_title": "M131 Өсімдік шаруашылығы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M131_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M131 Өсімдік шаруашылығы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M131_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M131 Топырақтану",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M132",
+      "major_code": "M132",
+      "major_title": "M132 Мал шаруашылығы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M132_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M132 Мал азықтандыру",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M132_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M132 Мал шаруашылығы өнімдерін өндіру технологиясы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M133",
+      "major_code": "M133",
+      "major_title": "M133 Орман шаруашылығы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M133_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M133 Орман екпелері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M133_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M133 Биотехния және жабайы жануарларды өсіру",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M134",
+      "major_code": "M134",
+      "major_title": "M134 Балық шаруашылығы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M134_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M134 Балық аулау",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M134_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M134 Аквакультура",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M135",
+      "major_code": "M135",
+      "major_title": "M135 Ауыл шаруашылығын энергиямен қамтамасыз ету",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M135_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M135 Электр техниканың теориялық негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M135_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M135 Электр машиналары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M136",
+      "major_code": "M136",
+      "major_title": "M136 Аграрлық техника және технологиясы",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M136_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M136 Ауылшаруашылық машиналары",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M136_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M136 Мал шаруашылығын механикаландыру және автоматтандыру машиналары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M137",
+      "major_code": "M137",
+      "major_title": "M137 Су ресурстары және суды пайдалану",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M137_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M137 Гидравлика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M137_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M137 Су ресурстарын кешенді пайдалану",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M138",
+      "major_code": "M138",
+      "major_title": "M138 Ветеринария",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M138_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M138 Жануарлар патологиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M138_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M138 Індеттану және жануарлардың жұқпалы аурулары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M139",
+      "major_code": "M139",
+      "major_title": "M139 Денсаулық сақтауды менеджмент",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M139_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M139 Экономикалық теория негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M139_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M139 Менеджмент негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M140",
+      "major_code": "M140",
+      "major_title": "M140 Қоғамдық денсаулық",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M140_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M140  Биостатистика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M140_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M140 Қоғамдық денсаулық",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M141",
+      "major_code": "M141",
+      "major_title": "M141 Мейіргер ісі",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M141_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M141 Мейіргер ісі негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M141_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M141 Мейіргер ісіндегі мененджмент",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M142",
+      "major_code": "M142",
+      "major_title": "M142 Фармация",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M142_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M142 Фармацияның басқарылуы және экономикасы және дәрілер технологиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M142_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M142 Фармацевтикалық химия және фармакогнозия",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M143",
+      "major_code": "M143",
+      "major_title": "M143 Биомедицина",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M143_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M143 Биостатистика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M143_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M143  Дәлелді медицина",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M144",
+      "major_code": "M144",
+      "major_title": "M144 Медицина",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M144_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M144 Биостатистика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M144_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M144 Дәлелді медицина",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M145",
+      "major_code": "M145",
+      "major_title": "M145 Медициналық-профилактикалық іс",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M145_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M145 Биостатистика",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M145_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M145 Гигиена және эпидемиология",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M146",
+      "major_code": "M146",
+      "major_title": "M146 Әлеуметтік жұмыс",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M146_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M146 Әлеуметтік жұмыс теориясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M146_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M146 Әлеуметтік жұмыс әдістері мен технологиялары",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M147",
+      "major_code": "M147",
+      "major_title": "M147 Туризм",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M147_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M147  Туризмология негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M147_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M147 Экскурсиятану",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M148",
+      "major_code": "M148",
+      "major_title": "M148 Тынығу",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M148_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M148  Мәдени-тынығу қызметіндегі әдістемелік жетекшілік технологиясы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M148_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M148 Мәдени-тынығу қызметі саласындағы менеджмент, маркетинг",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M149",
+      "major_code": "M149",
+      "major_title": "M149 Мейрамхана ісі және мейманхана бизнес",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M149_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M149 Мейрамхана және қонақ үй бизнесіндегі кәсіпкерлік қызметтің негіздері",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M149_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M149 Мейманхана және мейрамхана менеджменті",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M150",
+      "major_code": "M150",
+      "major_title": "M150 Санитарлық-профилактикалық іс-шаралар",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M150_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M150 Өнеркәсіптік қауіпсіздікті техникалық реттеу",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M150_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M150 Еңбек қорғауды басқару жүйелері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M151",
+      "major_code": "M151",
+      "major_title": "M151 Көлік қызметтері",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M151_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M151 Тасмалдауды ұйымдастыру және қозғалысты басқару",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M151_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M151 Көлік түрлерінің өзара қарым-қатынасы",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M152",
+      "major_code": "M152",
+      "major_title": "M152 Логистика (сала бойынша)",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M152_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M152 Көлік логистикасы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M152_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M152 Жеткізу тізбектерін басқару",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    },
+    {
+      "major_id": "M153",
+      "major_code": "M153",
+      "major_title": "M153 Археология және этнология",
+      "required_courses": [
+        {
+          "course_code": "ENGLISH_001",
+          "course_type": "english",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "TGO_001",
+          "course_type": "tgo",
+          "exam_questions": 40
+        },
+        {
+          "course_code": "M153_PROFILE_1",
+          "course_type": "profile",
+          "subject_name": "M153 Қазақстанның ежелгі және ортағасырлар тарихы",
+          "exam_questions": 60
+        },
+        {
+          "course_code": "M153_PROFILE_2",
+          "course_type": "profile",
+          "subject_name": "M153 Археология негіздері",
+          "exam_questions": 60
+        }
+      ],
+      "total_exam_questions": 200
+    }
+  ]
+}

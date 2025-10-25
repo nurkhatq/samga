@@ -80,6 +80,7 @@ services:
       - ./scripts:/app/scripts:ro
       - ./alembic:/app/alembic:ro
       - ./alembic.ini:/app/alembic.ini:ro
+      - ./data:/app/data:ro
     depends_on:
       postgres:
         condition: service_healthy
@@ -114,6 +115,7 @@ services:
       - CELERY_RESULT_BACKEND=redis://connect-aitu-redis:6379/1
     volumes:
       - ./app:/app/app:ro
+      - ./data:/app/data:ro
     depends_on:
       - postgres
       - redis

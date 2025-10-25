@@ -24,7 +24,7 @@ def upgrade() -> None:
     # Сначала создаем пользовательские типы
     op.execute("""
         DO $$ BEGIN
-            CREATE TYPE magistracytype AS ENUM ('profile', 'scientific');
+            CREATE TYPE magistracytype AS ENUM ('profile', 'scientific_pedagogical');
         EXCEPTION
             WHEN duplicate_object THEN null;
         END $$;

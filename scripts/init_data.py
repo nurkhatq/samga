@@ -1,186 +1,139 @@
 #!/usr/bin/env python3
 """
-Скрипт инициализации базовых данных
-- Специальности (153 штуки)
-- Предметы (ТГО, АНГЛ, профильные по каждой специальности)
-
-Usage:
-    python scripts/init_data.py
+Инициализация базовых данных из sorted_pairs.json
 """
 import asyncio
 import sys
+import json
 from pathlib import Path
 
-# Добавляем корень проекта в PYTHONPATH
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from sqlalchemy import select, func
 from app.db.session import async_session_maker
-from app.models.major import Major, MagistracyType
-from app.models.subject import Subject, SubjectType
-
-
-# Пример специальностей (в реальности должно быть 153)
-MAJORS_DATA = [
-    {
-        "code": "M001",
-        "title_kk": "Педагогика және психология",
-        "title_ru": "Педагогика и психология",
-        "magistracy_type": "profile",  # Используем строку напрямую
-        "categories": ["Білім беру"]
-    },
-    {
-        "code": "M002",
-        "title_kk": "Бастауыш оқыту педагогикасы мен әдістемесі",
-        "title_ru": "Педагогика и методика начального обучения",
-        "magistracy_type": "profile",  # Используем строку напрямую
-        "categories": ["Білім беру"]
-    },
-    {
-        "code": "M003",
-        "title_kk": "Математика",
-        "title_ru": "Математика",
-        "magistracy_type": "scientific_pedagogical",  # Используем строку напрямую
-        "categories": ["Жаратылыстану"]
-    },
-    {
-        "code": "M004",
-        "title_kk": "Физика",
-        "title_ru": "Физика",
-        "magistracy_type": "scientific_pedagogical",  # Используем строку напрямую
-        "categories": ["Жаратылыстану"]
-    },
-    {
-        "code": "M005",
-        "title_kk": "Ақпараттық жүйелер",
-        "title_ru": "Информационные системы",
-        "magistracy_type": "profile",  # Используем строку напрямую
-        "categories": ["Техника"]
-    },
-    # TODO: Добавить остальные 148 специальностей из реального списка
-]
-
-
-# Профильные предметы для каждой специальности
-PROFILE_SUBJECTS = {
-    "M001": [
-        {"code": "M001_PEDAGOGY", "title_kk": "Педагогика", "title_ru": "Педагогика"},
-        {"code": "M001_PSYCHOLOGY", "title_kk": "Психология", "title_ru": "Психология"},
-    ],
-    "M002": [
-        {"code": "M002_METHODS", "title_kk": "Әдістеме", "title_ru": "Методика"},
-        {"code": "M002_DIDACTICS", "title_kk": "Дидактика", "title_ru": "Дидактика"},
-    ],
-    "M003": [
-        {"code": "M003_ALGEBRA", "title_kk": "Алгебра", "title_ru": "Алгебра"},
-        {"code": "M003_GEOMETRY", "title_kk": "Геометрия", "title_ru": "Геометрия"},
-    ],
-    "M004": [
-        {"code": "M004_MECHANICS", "title_kk": "Механика", "title_ru": "Механика"},
-        {"code": "M004_THERMODYNAMICS", "title_kk": "Термодинамика", "title_ru": "Термодинамика"},
-    ],
-    "M005": [
-        {"code": "M005_DATABASES", "title_kk": "Дерекқорлар", "title_ru": "Базы данных"},
-        {"code": "M005_NETWORKS", "title_kk": "Желілер", "title_ru": "Сети"},
-    ],
-}
+from app.models.major import Major
+from app.models.subject import Subject
 
 
 async def init_majors():
-    """Инициализация специальностей"""
+    """Загрузка специальностей из sorted_pairs.json"""
     async with async_session_maker() as db:
-        # Проверяем существующие специальности
         result = await db.execute(select(func.count(Major.code)))
-        count = result.scalar()
-        
-        if count > 0:
-            print(f"⚠️  В базе уже есть {count} специальностей. Пропускаем...")
+        if result.scalar() > 0:
+            print(f"⚠️  Специальности уже загружены")
             return
         
-        print("📚 Инициализация специальностей...")
+        # Загружаем sorted_pairs.json
+        json_path = Path(__file__).parent.parent / "data" / "sorted_pairs.json"
+        if not json_path.exists():
+            print(f"❌ Файл {json_path} не найден!")
+            return
         
-        for major_data in MAJORS_DATA:
-            major = Major(**major_data)
+        with open(json_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        print(f"📚 Загрузка {len(data)} специальностей...")
+        
+        for code, info in data.items():
+            # Определяем тип магистратуры по коду
+            # M001-M021, M050-M079, M111-M153 - профильная
+            # M080-M110 - научно-педагогическая
+            code_num = int(code[1:])
+            if 80 <= code_num <= 110:
+                mag_type = "scientific_pedagogical"
+            else:
+                mag_type = "profile"
+            
+            major = Major(
+                code=code,
+                title_kk=info["title"],
+                title_ru=info.get("title_ru"),
+                magistracy_type=mag_type,
+                categories=info["categories"],
+                is_active=True
+            )
             db.add(major)
         
         await db.commit()
-        print(f"✅ Добавлено {len(MAJORS_DATA)} специальностей")
+        print(f"✅ Загружено {len(data)} специальностей")
 
 
 async def init_common_subjects():
-    """Инициализация общих предметов (ТГО, Иностранный язык)"""
+    """Создание общих предметов"""
     async with async_session_maker() as db:
-        # Проверяем существующие предметы
         result = await db.execute(
             select(func.count(Subject.code)).where(Subject.subject_type == "common")
         )
-        count = result.scalar()
-        
-        if count > 0:
-            print(f"⚠️  В базе уже есть {count} общих предметов. Пропускаем...")
+        if result.scalar() > 0:
+            print(f"⚠️  Общие предметы уже созданы")
             return
         
-        print("📖 Инициализация общих предметов...")
+        print("📖 Создание общих предметов...")
         
-        common_subjects = [
+        subjects = [
             {
                 "code": "TGO",
                 "title_kk": "Тарих, география, құқық",
                 "title_ru": "История, география, право",
-                "subject_type": "common",  # Используем строку напрямую
+                "subject_type": "common",
                 "major_code": None
             },
             {
                 "code": "ENG",
                 "title_kk": "Ағылшын тілі",
                 "title_ru": "Английский язык",
-                "subject_type": "common",  # Используем строку напрямую
+                "subject_type": "common",
                 "major_code": None
             },
         ]
         
-        for subject_data in common_subjects:
-            subject = Subject(**subject_data)
+        for s in subjects:
+            subject = Subject(**s)
             db.add(subject)
         
         await db.commit()
-        print(f"✅ Добавлено {len(common_subjects)} общих предметов")
+        print(f"✅ Создано {len(subjects)} общих предметов")
 
 
 async def init_profile_subjects():
-    """Инициализация профильных предметов"""
+    """Создание профильных предметов из categories"""
     async with async_session_maker() as db:
-        # Проверяем существующие профильные предметы
         result = await db.execute(
             select(func.count(Subject.code)).where(Subject.subject_type == "profile")
         )
-        count = result.scalar()
-        
-        if count > 0:
-            print(f"⚠️  В базе уже есть {count} профильных предметов. Пропускаем...")
+        if result.scalar() > 0:
+            print(f"⚠️  Профильные предметы уже созданы")
             return
         
-        print("📝 Инициализация профильных предметов...")
+        print("📝 Создание профильных предметов...")
+        
+        # Получаем все специальности
+        result = await db.execute(select(Major))
+        majors = result.scalars().all()
         
         total = 0
-        for major_code, subjects in PROFILE_SUBJECTS.items():
-            for subject_data in subjects:
+        for major in majors:
+            for i, category in enumerate(major.categories, 1):
+                code = f"{major.code}_SUBJ{i}"
+                
                 subject = Subject(
-                    **subject_data,
-                    subject_type="profile",  # Используем строку напрямую
-                    major_code=major_code
+                    code=code,
+                    title_kk=category,
+                    title_ru=category,
+                    subject_type="profile",
+                    major_code=major.code,
+                    is_active=True
                 )
                 db.add(subject)
                 total += 1
         
         await db.commit()
-        print(f"✅ Добавлено {total} профильных предметов")
+        print(f"✅ Создано {total} профильных предметов")
 
 
 async def main():
-    """Основная функция"""
     print("\n" + "=" * 60)
-    print("🎓 Connect AITU - Инициализация базовых данных")
+    print("🎓 Инициализация базовых данных")
     print("=" * 60 + "\n")
     
     try:
@@ -189,15 +142,11 @@ async def main():
         await init_profile_subjects()
         
         print("\n" + "=" * 60)
-        print("✅ Инициализация завершена успешно!")
+        print("✅ Инициализация завершена!")
         print("=" * 60)
-        print("\n📌 Следующие шаги:")
-        print("1. Импортировать вопросы: python scripts/import_questions.py")
-        print("2. Создать администратора: python scripts/create_admin.py")
-        print("\n")
-        
+        print("\n📌 Следующий шаг: python scripts/create_admin.py\n")
     except Exception as e:
-        print(f"\n❌ Ошибка при инициализации: {e}")
+        print(f"\n❌ Ошибка: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

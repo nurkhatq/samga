@@ -1,6 +1,5 @@
 """
-Модель предмета (Subject)
-Предметы: ТГО, Иностранный язык, Профильные
+Модель предмета (Subject) - ИСПРАВЛЕННАЯ
 """
 from enum import Enum as PyEnum
 from sqlalchemy import String, Boolean, Enum as SQLEnum, ForeignKey
@@ -11,8 +10,8 @@ from app.db.base import Base, TimestampMixin
 
 class SubjectType(str, PyEnum):
     """Тип предмета"""
-    COMMON = "common"  # Общий (ТГО, Иностранный язык)
-    PROFILE = "profile"  # Профильный
+    COMMON = "common"
+    PROFILE = "profile"
 
 
 class Subject(Base, TimestampMixin):
@@ -20,23 +19,17 @@ class Subject(Base, TimestampMixin):
     
     __tablename__ = "subjects"
     
-    # Код предмета (например, "TGO", "ENG", "M001_PEDAGOGY")
     code: Mapped[str] = mapped_column(String(50), primary_key=True, index=True)
-    
-    # Название на казахском
     title_kk: Mapped[str] = mapped_column(String(500), nullable=False)
-    
-    # Название на русском (опционально)
     title_ru: Mapped[str | None] = mapped_column(String(500), nullable=True)
     
-    # Тип предмета
-    subject_type: Mapped[SubjectType] = mapped_column(
-        SQLEnum(SubjectType, name="subject_type"),
+    # ВАЖНО: values_callable для правильной работы str enum!
+    subject_type: Mapped[str] = mapped_column(
+        SQLEnum(SubjectType, values_callable=lambda x: [e.value for e in x]),
         nullable=False,
         index=True
     )
     
-    # Если профильный предмет - связь с специальностью
     major_code: Mapped[str | None] = mapped_column(
         String(10),
         ForeignKey("majors.code", ondelete="CASCADE"),
@@ -44,10 +37,8 @@ class Subject(Base, TimestampMixin):
         index=True
     )
     
-    # Статус
     is_active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
     
-    # Relationships
     major: Mapped["Major"] = relationship("Major", back_populates="subjects")
     questions: Mapped[list["Question"]] = relationship(
         "Question",

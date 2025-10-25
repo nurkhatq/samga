@@ -1,17 +1,18 @@
 """
-Модель специальности (Major)
+Модель специальности (Major) - ИСПРАВЛЕННАЯ
 """
 from enum import Enum as PyEnum
-from sqlalchemy import String, Boolean, JSON, Enum as SQLEnum
+from sqlalchemy import String, Boolean, Enum as SQLEnum
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.dialects.postgresql import JSONB
 
 from app.db.base import Base, TimestampMixin
 
 
 class MagistracyType(str, PyEnum):
     """Тип магистратуры"""
-    PROFILE = "profile"  # Профильная
-    SCIENTIFIC_PEDAGOGICAL = "scientific_pedagogical"  # Научно-педагогическая
+    PROFILE = "profile"
+    SCIENTIFIC_PEDAGOGICAL = "scientific_pedagogical"
 
 
 class Major(Base, TimestampMixin):
@@ -19,30 +20,21 @@ class Major(Base, TimestampMixin):
     
     __tablename__ = "majors"
     
-    # Код специальности (например, "M001", "M002")
     code: Mapped[str] = mapped_column(String(10), primary_key=True, index=True)
-    
-    # Название на казахском
     title_kk: Mapped[str] = mapped_column(String(500), nullable=False)
-    
-    # Название на русском (опционально)
     title_ru: Mapped[str | None] = mapped_column(String(500), nullable=True)
     
-    # Тип магистратуры
-    magistracy_type: Mapped[MagistracyType] = mapped_column(
-        SQLEnum(MagistracyType, name="magistracy_type"),
-        default=MagistracyType.PROFILE,
+    # ВАЖНО: values_callable для правильной работы str enum!
+    magistracy_type: Mapped[str] = mapped_column(
+        SQLEnum(MagistracyType, values_callable=lambda x: [e.value for e in x]),
+        default="profile",
         nullable=False
     )
     
-    # Профильные предметы (categories из sorted_pairs.json)
-    # Пример: ["M001 - Педагогика", "M001 - Психология"]
-    categories: Mapped[list[str]] = mapped_column(JSON, default=list, nullable=False)
-    
-    # Статус
+    # JSONB вместо JSON
+    categories: Mapped[list[str]] = mapped_column(JSONB, default=list, nullable=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
     
-    # Relationships
     students: Mapped[list["User"]] = relationship("User", back_populates="major")
     subjects: Mapped[list["Subject"]] = relationship(
         "Subject",

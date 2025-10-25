@@ -53,7 +53,7 @@ class MajorResponse(MajorBase):
     updated_at: datetime = Field(..., description="Дата обновления")
     
     class Config:
-        from_attributes = True
+        orm_mode = True
         json_schema_extra = {
             "example": {
                 "code": "M001",

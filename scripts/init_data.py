@@ -26,35 +26,35 @@ MAJORS_DATA = [
         "code": "M001",
         "title_kk": "Педагогика және психология",
         "title_ru": "Педагогика и психология",
-        "magistracy_type": MagistracyType.PROFILE,
+        "magistracy_type": "profile",  # Используем строку напрямую
         "categories": ["Білім беру"]
     },
     {
         "code": "M002",
         "title_kk": "Бастауыш оқыту педагогикасы мен әдістемесі",
         "title_ru": "Педагогика и методика начального обучения",
-        "magistracy_type": MagistracyType.PROFILE,
+        "magistracy_type": "profile",  # Используем строку напрямую
         "categories": ["Білім беру"]
     },
     {
         "code": "M003",
         "title_kk": "Математика",
         "title_ru": "Математика",
-        "magistracy_type": MagistracyType.SCIENTIFIC_PEDAGOGICAL,
+        "magistracy_type": "scientific_pedagogical",  # Используем строку напрямую
         "categories": ["Жаратылыстану"]
     },
     {
         "code": "M004",
         "title_kk": "Физика",
         "title_ru": "Физика",
-        "magistracy_type": MagistracyType.SCIENTIFIC_PEDAGOGICAL,
+        "magistracy_type": "scientific_pedagogical",  # Используем строку напрямую
         "categories": ["Жаратылыстану"]
     },
     {
         "code": "M005",
         "title_kk": "Ақпараттық жүйелер",
         "title_ru": "Информационные системы",
-        "magistracy_type": MagistracyType.PROFILE,
+        "magistracy_type": "profile",  # Используем строку напрямую
         "categories": ["Техника"]
     },
     # TODO: Добавить остальные 148 специальностей из реального списка
@@ -112,7 +112,7 @@ async def init_common_subjects():
     async with async_session_maker() as db:
         # Проверяем существующие предметы
         result = await db.execute(
-            select(func.count(Subject.code)).where(Subject.subject_type == SubjectType.COMMON)
+            select(func.count(Subject.code)).where(Subject.subject_type == "common")
         )
         count = result.scalar()
         
@@ -127,14 +127,14 @@ async def init_common_subjects():
                 "code": "TGO",
                 "title_kk": "Тарих, география, құқық",
                 "title_ru": "История, география, право",
-                "subject_type": SubjectType.COMMON,
+                "subject_type": "common",  # Используем строку напрямую
                 "major_code": None
             },
             {
                 "code": "ENG",
                 "title_kk": "Ағылшын тілі",
                 "title_ru": "Английский язык",
-                "subject_type": SubjectType.COMMON,
+                "subject_type": "common",  # Используем строку напрямую
                 "major_code": None
             },
         ]
@@ -152,7 +152,7 @@ async def init_profile_subjects():
     async with async_session_maker() as db:
         # Проверяем существующие профильные предметы
         result = await db.execute(
-            select(func.count(Subject.code)).where(Subject.subject_type == SubjectType.PROFILE)
+            select(func.count(Subject.code)).where(Subject.subject_type == "profile")
         )
         count = result.scalar()
         
@@ -167,7 +167,7 @@ async def init_profile_subjects():
             for subject_data in subjects:
                 subject = Subject(
                     **subject_data,
-                    subject_type=SubjectType.PROFILE,
+                    subject_type="profile",  # Используем строку напрямую
                     major_code=major_code
                 )
                 db.add(subject)

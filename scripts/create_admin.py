@@ -54,7 +54,7 @@ async def create_admin():
                 update = input("Обновить пароль? (yes/no): ").strip().lower()
                 if update in ["yes", "y", "да"]:
                     existing.password_hash = get_password_hash(password)
-                    existing.role = UserRole.ADMIN
+                    existing.role = "admin"  # Используем строку напрямую
                     existing.full_name = full_name
                     existing.is_active = True
                     await db.commit()
@@ -63,12 +63,12 @@ async def create_admin():
                     print("❌ Отменено")
                 return
             
-            # Создаем администратора
+            # Создаем администратора - ВАЖНО: используем строку напрямую
             admin = User(
                 username=username,
                 password_hash=get_password_hash(password),
                 full_name=full_name,
-                role=UserRole.ADMIN,
+                role="admin",  # Используем строку напрямую, а не UserRole.ADMIN
                 is_active=True
             )
             
@@ -80,11 +80,13 @@ async def create_admin():
             print(f"   ID: {admin.id}")
             print(f"   Логин: {admin.username}")
             print(f"   ФИО: {admin.full_name}")
-            print(f"   Роль: {admin.role.value}")
+            print(f"   Роль: {admin.role}")
             print("\n🎉 Теперь вы можете войти в систему!")
         
         except Exception as e:
             print(f"\n❌ Ошибка при создании администратора: {e}")
+            import traceback
+            traceback.print_exc()
             await db.rollback()
             raise
 

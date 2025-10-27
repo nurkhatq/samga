@@ -64,7 +64,7 @@ services:
   backend:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.backend
     container_name: connect-aitu-backend
     restart: unless-stopped
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
@@ -97,12 +97,37 @@ services:
       - connect-aitu-network
 
   # ===================================
+  # Next.js Frontend
+  # ===================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: connect-aitu-frontend
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=https://connect-aitu.me/api
+      - NEXT_PUBLIC_APP_URL=https://connect-aitu.me
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - connect-aitu-network
+
+  # ===================================
   # Celery Worker
   # ===================================
   celery-worker:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.backend
     container_name: connect-aitu-celery-worker
     restart: unless-stopped
     command: celery -A app.tasks.celery_app worker --loglevel=info --concurrency=4
@@ -117,9 +142,12 @@ services:
       - ./app:/app/app:ro
       - ./data:/app/data:ro
     depends_on:
-      - postgres
-      - redis
-      - rabbitmq
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     healthcheck:
       test: ["CMD-SHELL", "celery -A app.tasks.celery_app inspect ping -d celery@$$(hostname) | grep -q OK || exit 1"]
       interval: 30s
@@ -132,7 +160,7 @@ services:
   celery-beat:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.backend
     container_name: connect-aitu-celery-beat
     restart: unless-stopped
     command: celery -A app.tasks.celery_app beat --loglevel=info
@@ -146,9 +174,12 @@ services:
     volumes:
       - ./app:/app/app:ro
     depends_on:
-      - postgres
-      - redis
-      - rabbitmq
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     healthcheck:
       test: ["CMD-SHELL", "ps aux | grep -q '[c]elery beat' || exit 1"]
       interval: 30s
@@ -157,6 +188,7 @@ services:
       start_period: 40s
     networks:
       - connect-aitu-network
+
   # ===================================
   # Nginx
   # ===================================
@@ -175,6 +207,7 @@ services:
       - "443:443"
     depends_on:
       - backend
+      - frontend
     networks:
       - connect-aitu-network
 

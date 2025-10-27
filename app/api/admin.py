@@ -265,7 +265,7 @@ async def get_overview_stats(
     # Попытки экзаменов
     attempts_result = await db.execute(
         select(func.count(ExamAttempt.id)).where(
-            ExamAttempt.status == ExamStatus.COMPLETED
+            ExamAttempt.status == ExamStatus.COMPLETED.value
         )
     )
     total_attempts = attempts_result.scalar() or 0
@@ -273,7 +273,7 @@ async def get_overview_stats(
     # Средний балл
     avg_score_result = await db.execute(
         select(func.avg(ExamAttempt.score_percentage)).where(
-            ExamAttempt.status == ExamStatus.COMPLETED,
+            ExamAttempt.status == ExamStatus.COMPLETED.value,
             ExamAttempt.score_percentage.isnot(None)
         )
     )

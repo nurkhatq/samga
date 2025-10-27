@@ -25,7 +25,7 @@ class Subject(Base, TimestampMixin):
     
     # ВАЖНО: values_callable для правильной работы str enum!
     subject_type: Mapped[str] = mapped_column(
-        SQLEnum(SubjectType, values_callable=lambda x: [e.value for e in x]),
+        SQLEnum(SubjectType, native_enum=False, values_callable=lambda x: [e.value for e in x]),
         nullable=False,
         index=True
     )

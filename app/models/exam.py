@@ -48,7 +48,7 @@ class ExamAttempt(Base, TimestampMixin):
     
     # Режим
     mode: Mapped[ExamMode] = mapped_column(
-        SQLEnum(ExamMode, name="exam_mode"),
+        SQLEnum(ExamMode, native_enum=False, values_callable=lambda x: [e.value for e in x]),
         nullable=False,
         index=True
     )
@@ -76,7 +76,7 @@ class ExamAttempt(Base, TimestampMixin):
     
     # Статус
     status: Mapped[ExamStatus] = mapped_column(
-        SQLEnum(ExamStatus, name="exam_status"),
+        SQLEnum(ExamStatus, native_enum=False, values_callable=lambda x: [e.value for e in x]),
         default=ExamStatus.IN_PROGRESS,
         nullable=False,
         index=True

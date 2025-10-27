@@ -208,7 +208,7 @@ class UserService:
         
         for role in UserRole:
             result = await db.execute(
-                select(func.count(User.id)).where(User.role == role)
+                select(func.count(User.id)).where(User.role == role.value)
             )
             counts[role.value] = result.scalar() or 0
         

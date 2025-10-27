@@ -120,7 +120,7 @@ class AuthService:
             )
         
         # Получаем user_id
-        user_id: int = payload.get("sub")
+        user_id: int = int(payload.get("sub"))
         if user_id is None:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,

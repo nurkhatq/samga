@@ -10,7 +10,7 @@ from app.db.base import Base, TimestampMixin
 
 class SubjectType(str, PyEnum):
     """Тип предмета"""
-    COMMON = "common"
+    GENERAL = "general"
     PROFILE = "profile"
 
 

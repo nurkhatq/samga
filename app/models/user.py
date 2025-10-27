@@ -27,7 +27,7 @@ class User(Base, TimestampMixin):
     
     # ВАЖНО: values_callable для правильной работы str enum!
     role: Mapped[str] = mapped_column(
-        SQLEnum(UserRole, values_callable=lambda x: [e.value for e in x]),
+        SQLEnum(UserRole, native_enum=False, values_callable=lambda x: [e.value for e in x]),
         default="student",
         nullable=False,
         index=True

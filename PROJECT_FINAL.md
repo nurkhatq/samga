@@ -186,7 +186,7 @@ docker-compose -f docker-compose.prod.yml up -d --build
 docker-compose exec backend alembic upgrade head
 docker-compose exec backend python scripts/init_data.py
 docker-compose exec backend python scripts/create_admin.py
-
+docker-compose exec backend python scripts/create_subjects_and_import.py data/tests.json data/questions.json
 # API: https://connect-aitu.me
 # Docs: https://connect-aitu.me/docs
 ```

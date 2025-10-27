@@ -6,7 +6,6 @@ from sqlalchemy import String, Integer, JSON, Text, Enum as SQLEnum, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.dialects.postgresql import UUID, ARRAY
 import uuid
-
 from app.db.base import Base, TimestampMixin
 
 
@@ -53,16 +52,16 @@ class Question(Base, TimestampMixin):
     options: Mapped[list[dict]] = mapped_column(JSON, nullable=False)
     
     # Сложность
-    difficulty: Mapped[QuestionDifficulty] = mapped_column(
-        SQLEnum(QuestionDifficulty, name="question_difficulty"),
+    difficulty: Mapped[str] = mapped_column(
+        String(20),
         default=QuestionDifficulty.A,
         nullable=False,
         index=True
     )
     
     # Тип вопроса
-    question_type: Mapped[QuestionType] = mapped_column(
-        SQLEnum(QuestionType, name="question_type"),
+    question_type: Mapped[str] = mapped_column(
+        String(20),
         default=QuestionType.SINGLE,
         nullable=False
     )
